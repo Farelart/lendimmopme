@@ -3,7 +3,6 @@ import Image from "next/image";
 // Property Loan Card Component
 export default function Card({
   title,
-  location,
   imageUrl,
   investorReturn,
   borrowerPayment,
@@ -12,7 +11,6 @@ export default function Card({
   amount,
 }: {
   title: string;
-  location: string;
   imageUrl: string;
   investorReturn: string;
   borrowerPayment: string;
@@ -147,7 +145,7 @@ export default function Card({
                 />
               </svg>
             </span>
-            <span className="text-sm">Délai d'exécution</span>
+            <span className="text-sm">Délai d&apos;exécution</span>
             <span className="ml-auto font-semibold">{executionDays}</span>
           </div>
         </div>

@@ -52,7 +52,6 @@ export default function Page() {
             <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:grid-cols-3">
               <Card
                 title="Prêt hypothécaire à accorder sur trois appartements nouvellement développés (sous licence irrévocable) avec des frais de sortie de 12 512,50 € à Anvers"
-                location="Anvers"
                 imageUrl="/property-1.jpg"
                 investorReturn="8,00%"
                 borrowerPayment="8,50%"
@@ -62,7 +61,6 @@ export default function Page() {
               />
               <Card
                 title="Prêt hypothécaire accordé à un établissement de restauration à Hardinxveld-Giessendam"
-                location="Hardinxveld-Giessendam"
                 imageUrl="/property-2.jpg"
                 investorReturn="7,00%"
                 borrowerPayment="7,50%"
@@ -72,7 +70,6 @@ export default function Page() {
               />
               <Card
                 title="Prêt hypothécaire pour une résidence à rénover"
-                location="Bruxelles"
                 imageUrl="/property-3.jpg"
                 investorReturn="7,50%"
                 borrowerPayment="8,00%"
