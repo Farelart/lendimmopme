@@ -6,6 +6,7 @@
 
 body {
   font-family: var(--font-jakarta);
+  background-color: #f5f5f5;
 }
 
 :root {
