@@ -6,10 +6,20 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
-  CarouselApi,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+
+type CarouselApi = {
+  scrollPrev: () => void;
+  scrollNext: () => void;
+  canScrollPrev: () => boolean;
+  canScrollNext: () => boolean;
+  selectedScrollSnap: () => number;
+  scrollTo: (index: number) => void;
+  on: (event: string, callback: () => void) => void;
+  off: (event: string, callback: () => void) => void;
+};
 
 export interface Gallery4Item {
   id: string;
