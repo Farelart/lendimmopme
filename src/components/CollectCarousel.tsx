@@ -10,7 +10,7 @@ import Card from "@/components/Card";
 
 export default function CollectCarousel() {
   return (
-    <Tabs defaultValue="tab-1" className="container mx-auto px-4">
+    <Tabs defaultValue="tab-1" className="container mx-auto px-4" id="projets">
       <TabsList className="h-auto rounded-none border-b border-border bg-transparent p-0">
         <TabsTrigger
           value="tab-1"

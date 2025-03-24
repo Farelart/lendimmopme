@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
@@ -110,7 +111,7 @@ export default function Page() {
             <Image
               className="rounded-md overflow-hidden w-full max-h-80"
               src="https://a.storyblok.com/f/120264/1890x1063/5c776d444e/investir-dans-l-economie-reelle.png/m/280x250"
-              alt="Le Figaro"
+              alt="Blog 1 Image"
               width={280}
               height={250}
             />
@@ -123,7 +124,7 @@ export default function Page() {
               intéressant, mais vous ne savez pas exactement...
             </p>
             <div className="flex items-center gap-1 underline underline-offset-4">
-              <Link href="/" className="text-sm">
+              <Link href="/blog/cles-crowdfunding" className="text-sm">
                 Lire l&apos;article
               </Link>
               <BiRightArrowAlt />
@@ -133,8 +134,8 @@ export default function Page() {
           <article className="md:basis-1/3 bg-white p-6 rounded-md flex flex-col gap-6">
             <Image
               className="rounded-md overflow-hidden w-full max-h-80"
-              src="https://a.storyblok.com/f/120264/1890x1063/5c776d444e/investir-dans-l-economie-reelle.png/m/280x250"
-              alt="Le Figaro"
+              src="https://a.storyblok.com/f/120264/1250x500/3db29d6045/selection-des-projets-chez-wiseed.png/m/280x250"
+              alt="Blog 2 Image"
               width={280}
               height={250}
             />
@@ -147,7 +148,7 @@ export default function Page() {
               centaines de demandes de financement en crowdfunding...
             </p>
             <div className="flex items-center gap-1 underline underline-offset-4">
-              <Link href="/" className="text-sm">
+              <Link href="/blog/selection" className="text-sm">
                 Lire l&apos;article
               </Link>
               <BiRightArrowAlt />
@@ -157,8 +158,8 @@ export default function Page() {
           <article className="md:basis-1/3 bg-white p-6 rounded-md flex flex-col gap-6">
             <Image
               className="rounded-md overflow-hidden w-full max-h-80"
-              src="https://a.storyblok.com/f/120264/1890x1063/5c776d444e/investir-dans-l-economie-reelle.png/m/280x250"
-              alt="Le Figaro"
+              src="https://a.storyblok.com/f/120264/1250x500/58254500c2/crowdfunding-definition.png/m/280x250"
+              alt="Blog 3 Image"
               width={280}
               height={250}
             />
@@ -170,7 +171,7 @@ export default function Page() {
               ou vu une info sur les réseaux sociaux… et vous vous...
             </p>
             <div className="flex items-center gap-1 underline underline-offset-4">
-              <Link href="/" className="text-sm">
+              <Link href="/blog/crowdfunding" className="text-sm">
                 Lire l&apos;article
               </Link>
               <BiRightArrowAlt />
@@ -352,42 +353,7 @@ export default function Page() {
           </section>
         </div>
 
-        <footer className="my-10 p-12 md:p-0 container mx-auto  text-sm">
-          <section className="flex flex-col md:flex-row gap-6 justify-between">
-            <div>
-              <h4 className="font-bold">Les projets</h4>
-              <div className="mt-4">
-                <Link href="/">Les projets en crowdfunding</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold">Investisseurs</h4>
-              <div className="mt-4 flex flex-col gap-4">
-                <Link href="/">Comment investir?</Link>
-                <Link href="/">Pourquoi investir?</Link>
-                <Link href="/">Avertissement sur les risques</Link>
-                <Link href="/">Besoin d&apos;aide?</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold">Levez des fonds</h4>
-              <div className="mt-4 flex flex-col gap-4">
-                <Link href="/">Déposer un dossier immobilier</Link>
-                <Link href="/">Déposer un dossier PME</Link>
-              </div>
-            </div>
-          </section>
-          <hr className="my-5" />
-          <h2 className="font-bold">AVERTISSEMENT</h2>
-          <p className="my-5">
-            Les investissements proposés présentent un risque de perte partielle
-            ou totale du capital ainsi qu&apos;un risque d&apos;illiquidité.
-          </p>
-          <div className="flex flex-col gap-4">
-            <Link href="/">Conditions d&apos;utilisation</Link>
-            <Link href="/">Politique de confidentialité</Link>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </>
   );
