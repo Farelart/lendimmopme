@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "a.storyblok.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "**",
+      },
     ],
   },
 };

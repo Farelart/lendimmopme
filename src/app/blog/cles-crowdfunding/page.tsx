@@ -31,7 +31,7 @@ export default function pages() {
               <strong>Frédéric RAYNAL</strong>
               <p>Expert en crowdfunding</p>
             </div>
-            <p className="text-gray-500">ven. 9 déc. 2022, 11:55</p>
+            <p className="text-purple-600">ven. 9 déc. 2022, 11:55</p>
           </div>
           <div className="md:w-[70%] flex flex-col gap-6">
             <p>
