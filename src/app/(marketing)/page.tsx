@@ -18,7 +18,8 @@ export default function Page() {
       <Header />
       <main className="my-8 flex flex-col">
         <h2 className="container mx-auto px-4 mt-12 mb-4 font-bold text-2xl text-purple-700">
-          Les <span className="bg-orange-500/50 p-1 rounded-xl">collectes</span>
+          Les
+          <span className="bg-orange-500/50 p-1 rounded-xl">collectes</span>
           effectuées
         </h2>
 

@@ -65,7 +65,7 @@ export default function CollectCarousel() {
               </CarouselItem>
               <CarouselItem className="md:basis-1/2 lg:basis-1/3 pl-4">
                 <Card
-                  title=""
+                  title="Prêt hypothécaire accordé pour un nouveau bâtiment commercial à construire pour la location à Oosterhout"
                   imageUrl="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
                   investorReturn="7,50%"
                   borrowerPayment="8,00%"
@@ -89,37 +89,37 @@ export default function CollectCarousel() {
             <CarouselContent className="-ml-4">
               <CarouselItem className="md:basis-1/2 lg:basis-1/3  pl-4">
                 <Card
-                  title="Prêt hypothécaire à accorder sur trois appartements nouvellement développés (sous licence irrévocable) avec des frais de sortie de 12 512,50 € à Anvers"
+                  title="REVIBAT"
                   imageUrl="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
-                  investorReturn="8,00%"
-                  borrowerPayment="8,50%"
+                  investorReturn="6,00%"
+                  borrowerPayment="7,50%"
                   loanToValue="69%"
                   executionDays="14 jours ouvrables"
-                  amount="715 000 €"
+                  amount="Pre-seed 300 000 €"
                 />
               </CarouselItem>
               <CarouselItem className="md:basis-1/2 lg:basis-1/3  pl-4">
                 <Card
-                  title="Prêt hypothécaire accordé à un établissement de restauration à Hardinxveld-Giessendam"
+                  title="CAPELETTE"
                   imageUrl="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
-                  investorReturn="7,00%"
-                  borrowerPayment="7,50%"
-                  loanToValue="65%"
-                  executionDays="2 jours ouvrables"
-                  amount="425 000 €"
+                  investorReturn="10,00%"
+                  borrowerPayment="9,50%"
+                  loanToValue="5%"
+                  executionDays="20 jours ouvrables"
+                  amount="seed 850 000 €"
                 />
               </CarouselItem>
-              <CarouselItem className="bmd:basis-1/2 lg:basis-1/3  pl-4">
+              {/* <CarouselItem className="bmd:basis-1/2 lg:basis-1/3 pl-4">
                 <Card
                   title="Prêt hypothécaire pour une résidence à rénover"
                   imageUrl="/Y-Combinator-scaled.webp"
-                  investorReturn="7,50%"
+                  investorReturn="7,0%"
                   borrowerPayment="8,00%"
                   loanToValue="72%"
                   executionDays="10 jours ouvrables"
                   amount="550 000 €"
                 />
-              </CarouselItem>
+              </CarouselItem> */}
             </CarouselContent>
             <CarouselNavigation
               className="absolute -bottom-20 left-auto top-auto w-full justify-end gap-2"
