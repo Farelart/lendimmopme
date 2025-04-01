@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { ClerkProvider } from "@clerk/nextjs";
+import { frFR } from "@clerk/localizations";
 import "./globals.css";
 
 const jakarta = localFont({
@@ -19,8 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${jakarta.variable}  antialiased`}>{children}</body>
-    </html>
+    <ClerkProvider localization={frFR}>
+      <html lang="en">
+        <body className={`${jakarta.variable}  antialiased`}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }

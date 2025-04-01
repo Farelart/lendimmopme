@@ -11,8 +11,11 @@ export default function Header() {
       <div className="absolute top-0 left-0 right-0 z-10">
         <div className="container mx-auto px-4 md:px-0">
           <nav className="flex justify-between items-center py-6">
-            <h1 className="text-white font-extrabold text-2xl">LendImmoPME</h1>
-
+            <Link href="/">
+              <h1 className="text-white font-extrabold text-2xl">
+                LendImmoPME
+              </h1>
+            </Link>
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-4 lg:gap-8">
               <Link
@@ -25,7 +28,7 @@ export default function Header() {
                 href="#"
                 className="text-white/90 hover:text-white text-sm lg:text-base whitespace-nowrap"
               >
-                Prêter
+                Levez des fonds
               </Link>
               <Link
                 href="#"
@@ -33,12 +36,18 @@ export default function Header() {
               >
                 Blog
               </Link>
-              <button className="text-purple-600 bg-white px-4 py-2 rounded-full hover:bg-gray-200 text-sm lg:text-base whitespace-nowrap transition-all">
+              <Link
+                href="/sign-in"
+                className="text-purple-600 bg-white px-4 py-2 rounded-full hover:bg-gray-200 text-sm lg:text-base whitespace-nowrap transition-all"
+              >
                 Se connecter
-              </button>
-              <button className="text-white bg-purple-600 px-4 py-2 rounded-full hover:bg-purple-400 text-sm lg:text-base whitespace-nowrap transition-all">
+              </Link>
+              <Link
+                href="/sign-up"
+                className="text-white bg-purple-600 px-4 py-2 rounded-full hover:bg-purple-400 text-sm lg:text-base whitespace-nowrap transition-all"
+              >
                 S&apos;inscrire
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -82,22 +91,37 @@ export default function Header() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden bg-indigo-950 py-4 px-2 flex flex-col gap-4 items-center rounded">
-              <Link href="#" className="block text-white hover:text-gray-200">
+            <div className="md:hidden bg-purple-700 py-4 px-2 flex flex-col gap-4 items-center rounded">
+              <Link
+                href="/sign-in"
+                className="block text-white hover:text-gray-200"
+              >
                 Investir
               </Link>
-              <Link href="#" className="block text-white  hover:text-gray-200">
+              <Link
+                href="/sign-in"
+                className="block text-white  hover:text-gray-200"
+              >
                 Prêter
               </Link>
-              <Link href="#" className="block text-white  hover:text-gray-200">
+              <Link
+                href="/blog/selection"
+                className="block text-white  hover:text-gray-200"
+              >
                 Blog
               </Link>
-              <button className="text-purple-600 bg-white px-4 py-2 rounded-full hover:bg-gray-200 text-sm lg:text-base whitespace-nowrap">
+              <Link
+                href="/sign-in"
+                className="text-purple-600 bg-white px-4 py-2 rounded-full hover:bg-gray-200 text-sm lg:text-base whitespace-nowrap transition-all"
+              >
                 Se connecter
-              </button>
-              <button className="text-white bg-purple-600 px-4 py-2 rounded-full hover:bg-purple-700 text-sm lg:text-base whitespace-nowrap">
+              </Link>
+              <Link
+                href="/sign-up"
+                className="text-white bg-purple-600 px-4 py-2 rounded-full hover:bg-purple-400 text-sm lg:text-base whitespace-nowrap transition-all"
+              >
                 S&apos;inscrire
-              </button>
+              </Link>
             </div>
           )}
         </div>
