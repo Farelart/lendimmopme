@@ -19,19 +19,19 @@ export default function Header() {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-4 lg:gap-8">
               <Link
-                href="#"
+                href="/sign-in"
                 className="text-white/90 hover:text-white text-sm lg:text-base whitespace-nowrap"
               >
                 Investir
               </Link>
               <Link
-                href="#"
+                href="/sign-in"
                 className="text-white/90 hover:text-white text-sm lg:text-base whitespace-nowrap"
               >
                 Levez des fonds
               </Link>
               <Link
-                href="#"
+                href="/blog/selection"
                 className="text-white/90 hover:text-white text-sm lg:text-base whitespace-nowrap"
               >
                 Blog
