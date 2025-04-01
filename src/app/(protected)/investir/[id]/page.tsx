@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { projects } from "@/lib/projectsData";
+import sendInvestmentEmail from "@/actions/investirEmail";
 
 type Project = {
   id: number;
@@ -59,29 +60,53 @@ export default function ProjectDetailPage() {
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log({ firstName, lastName, email, phone, investAmount });
 
-    // Show success message
-    setFormSubmitted(true);
+    try {
+      // Create form data
+      const formData = new FormData();
+      formData.append("firstName", firstName);
+      formData.append("lastName", lastName);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("investAmount", investAmount);
 
-    // Reset form
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPhone("");
-    setInvestAmount("");
+      if (project) {
+        formData.append("projectTitle", project.title);
+        formData.append("projectId", project.id.toString());
+      }
 
-    // Close modal after 3 seconds
-    setTimeout(() => {
-      setShowModal(false);
-      // Reset form submitted state after modal is closed
-      setTimeout(() => {
-        setFormSubmitted(false);
-      }, 300);
-    }, 3000);
+      // Send email
+      const result = await sendInvestmentEmail(formData);
+
+      if (result.success) {
+        // Show success message
+        setFormSubmitted(true);
+
+        // Reset form
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setInvestAmount("");
+
+        // Close modal after 3 seconds
+        setTimeout(() => {
+          setShowModal(false);
+          // Reset form submitted state after modal is closed
+          setTimeout(() => {
+            setFormSubmitted(false);
+          }, 300);
+        }, 3000);
+      } else {
+        console.error("Failed to send email:", result.error);
+        alert("Une erreur est survenue. Veuillez réessayer plus tard.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Une erreur est survenue. Veuillez réessayer plus tard.");
+    }
   };
 
   if (loading) {
