@@ -71,7 +71,14 @@ export default function FinancingRequestPage() {
               projets.
             </p>
 
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-md transition-colors">
+            <button
+              onClick={() =>
+                document
+                  .getElementById("typeFinancement")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-md transition-colors"
+            >
               SOUMETTRE UN DOSSIER
             </button>
           </div>
@@ -91,7 +98,7 @@ export default function FinancingRequestPage() {
       </div>
 
       {/* Types de projets de financement */}
-      <div className="my-16">
+      <div id="typeFinancement" className="my-16">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
           Nos solutions de financement
         </h2>
