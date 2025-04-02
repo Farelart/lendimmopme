@@ -15,8 +15,8 @@ export default function Footer() {
             <h4 className="font-bold">Investisseurs</h4>
             <div className="mt-4 flex flex-col gap-4">
               <Link href="/blog/selection">Comment investir?</Link>
+              <Link href="/risques">Risques d&apos;investissement</Link>
               <Link href="/blog/cles-crowdfunding">Pourquoi investir?</Link>
-              <Link href="/#avertissement">Avertissement sur les risques</Link>
               <Link href="/">Besoin d&apos;aide?</Link>
             </div>
           </div>

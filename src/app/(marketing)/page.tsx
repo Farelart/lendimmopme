@@ -16,6 +16,7 @@ export default function Page() {
   return (
     <>
       <Header />
+
       <main className="my-8 flex flex-col">
         <h2 className="container mx-auto px-4 mt-12 mb-4 font-bold text-2xl text-purple-700">
           Les
@@ -33,6 +34,67 @@ export default function Page() {
             LendImmoPME, votre partenaire digital pour des investissements
             adaptés à vos besoins et vos objectifs
           </p>
+
+          <div className="my-16 relative">
+            {/* Fond décoratif */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-purple-50 rounded-xl -z-10 transform -skew-y-1"></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center py-10 px-6">
+              <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
+                <div className="bg-white shadow-lg rounded-full p-6 mb-4 w-28 h-28 flex items-center justify-center border-2 border-purple-200">
+                  <div>
+                    <h3 className="text-xl font-bold text-purple-800">386+</h3>
+                    <p className="text-sm font-medium text-purple-600">
+                      millions
+                    </p>
+                  </div>
+                </div>
+                <div className="w-32 h-0.5 bg-gradient-to-r from-purple-600 to-purple-400 my-3"></div>
+                <p className="text-gray-700 font-medium">
+                  Financement collecté
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
+                <div className="bg-white shadow-lg rounded-full p-6 mb-4 w-28 h-28 flex items-center justify-center border-2 border-purple-200">
+                  <div>
+                    <h3 className="text-xl font-bold text-purple-800">329</h3>
+                  </div>
+                </div>
+                <div className="w-32 h-0.5 bg-gradient-to-r from-purple-600 to-purple-400 my-3"></div>
+                <p className="text-gray-700 font-medium">Projets financés</p>
+              </div>
+
+              <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
+                <div className="bg-white shadow-lg rounded-full p-6 mb-4 w-28 h-28 flex items-center justify-center border-2 border-purple-200">
+                  <div>
+                    <h3 className="text-xl font-bold text-purple-800">
+                      76 400+
+                    </h3>
+                  </div>
+                </div>
+                <div className="w-32 h-0.5 bg-gradient-to-r from-purple-600 to-purple-400 my-3"></div>
+                <p className="text-gray-700 font-medium">
+                  Investissements réalisés
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
+                <div className="bg-white shadow-lg rounded-full p-6 mb-4 w-28 h-28 flex items-center justify-center border-2 border-purple-200">
+                  <div>
+                    <h3 className="text-xl font-bold text-purple-800">
+                      22 200+
+                    </h3>
+                  </div>
+                </div>
+                <div className="w-32 h-0.5 bg-gradient-to-r from-purple-600 to-purple-400 my-3"></div>
+                <p className="text-gray-700 font-medium">
+                  Investisseurs durables
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="my-10 flex flex-col items-center justify-center gap-8 md:flex-row">
             <Image
               src="https://a.storyblok.com/f/120264/7988x5325/6e1e30a0a8/un-homme-devant-son-ordinateur-portable.jpg/m/1000x0"
@@ -120,8 +182,8 @@ export default function Page() {
               mieux placés pour partager leur expérience.
             </p>
           </div>
-          <section className="container mx-auto flex flex-col md:flex-row gap-4 ">
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between flex-1 md:w-1/3">
+          <section className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
               <p>
                 Les descriptifs des projets sont détaillés, les analyses sont
                 claires et donnent une bonne idée pour choisir et trier les
@@ -134,7 +196,7 @@ export default function Page() {
                 <p>Charles P.</p>
               </div>
             </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between flex-1 md:w-1/3">
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
               <p>
                 Cela fait des années que j&apos;investis sur LendImmoPME, le
                 service client est très accessible et agréable.
@@ -146,7 +208,7 @@ export default function Page() {
                 <p>Benoit N.</p>
               </div>
             </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between flex-1 md:w-1/3">
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
               <p>
                 Bonne diversité des placements proposés. Parcours de
                 souscription bien construit. Interface satisfaisante.
@@ -156,6 +218,83 @@ export default function Page() {
                   SF
                 </span>
                 <p>Sylvain F.</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
+              <p>
+                J&apos;apprécie particulièrement la transparence des
+                informations et le suivi régulier des projets dans lesquels
+                j&apos;ai investi.
+              </p>
+              <div className="flex gap-2 items-center">
+                <span className="bg-amber-950 text-white p-3 rounded-full">
+                  ML
+                </span>
+                <p>Marie L.</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
+              <p>
+                La plateforme est intuitive et facile à utiliser. Les rendements
+                sont au rendez-vous et conformes aux prévisions annoncées.
+              </p>
+              <div className="flex gap-2 items-center">
+                <span className="bg-amber-950 text-white p-3 rounded-full">
+                  JD
+                </span>
+                <p>Jean D.</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
+              <p>
+                Excellente expérience avec LendImmoPME. Les projets immobiliers
+                sont bien sélectionnés et l&apos;équipe répond rapidement à mes
+                questions.
+              </p>
+              <div className="flex gap-2 items-center">
+                <span className="bg-amber-950 text-white p-3 rounded-full">
+                  AT
+                </span>
+                <p>Alexandre T.</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
+              <p>
+                Je recommande vivement cette plateforme pour la qualité des
+                projets et le professionnalisme de l&apos;équipe. Investir
+                n&apos;a jamais été aussi simple.
+              </p>
+              <div className="flex gap-2 items-center">
+                <span className="bg-amber-950 text-white p-3 rounded-full">
+                  SB
+                </span>
+                <p>Sophie B.</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
+              <p>
+                Après plusieurs années d&apos;investissement sur LendImmoPME, je
+                suis pleinement satisfait des résultats et de la sécurité
+                offerte par la plateforme.
+              </p>
+              <div className="flex gap-2 items-center">
+                <span className="bg-amber-950 text-white p-3 rounded-full">
+                  PL
+                </span>
+                <p>Pierre L.</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
+              <p>
+                La diversification de mon portefeuille a été grandement
+                facilitée grâce à LendImmoPME. Une valeur sûre dans le
+                crowdfunding immobilier.
+              </p>
+              <div className="flex gap-2 items-center">
+                <span className="bg-amber-950 text-white p-3 rounded-full">
+                  CM
+                </span>
+                <p>Claire M.</p>
               </div>
             </div>
           </section>

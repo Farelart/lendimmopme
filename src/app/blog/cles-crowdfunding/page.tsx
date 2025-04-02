@@ -325,7 +325,8 @@ export default function pages() {
           </div>
         </div>
       </article>
-      <div className="bg-amber-300">
+
+      <div className="bg-amber-300 mt-10">
         <Footer />
       </div>
     </section>
