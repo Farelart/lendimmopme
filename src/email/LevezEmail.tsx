@@ -15,9 +15,13 @@ const baseUrl = "https://www.lendimmopme.com/";
 
 type LevezFormData = {
   companyName?: string;
+  firstName?: string;
+  lastName?: string;
   email?: string;
+  phone?: string;
   legalForm?: string;
   siret?: string;
+  website?: string;
   projectDescription?: string;
 };
 

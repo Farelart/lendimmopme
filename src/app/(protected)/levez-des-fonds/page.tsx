@@ -9,6 +9,8 @@ import sendEmail from "@/actions/levezEmail";
 export default function FinancingRequestPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  // Add state to track which form to display
+  const [activeForm, setActiveForm] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,10 +43,19 @@ export default function FinancingRequestPage() {
     .filter((project) => project.progress > 50) // Only show projects with good progress
     .slice(0, 3); // Limit to 3 projects
 
+  // Function to handle form selection
+  const showForm = (formId: string) => {
+    setActiveForm(formId);
+    // Scroll to the form section
+    setTimeout(() => {
+      document.getElementById(formId)?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
   // ... rest of your component remains the same
 
   return (
-    <div className="px-4 md:px-0 md:container mx-auto py-8">
+    <div className="px-4 md:px-0 md:container mx-auto py-16">
       {/* Notre offre section */}
       <div className="mb-16">
         <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -102,180 +113,447 @@ export default function FinancingRequestPage() {
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
           Nos solutions de financement
         </h2>
+        <p className="text-center text-lg mb-8">
+          Adaptées en fonction du type de projet
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Projet immobilier */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
-            <div className="relative h-48">
-              <Image
-                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80"
-                alt="Projet immobilier"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">Projet immobilier</h3>
-                  <p className="text-sm">
-                    Financement jusqu&apos;à 5 000 000 €
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <p className="text-gray-600 mb-4">
-                Financement pour l&apos;acquisition, la rénovation ou la
-                construction de biens immobiliers résidentiels ou commerciaux.
-              </p>
-
-              {/* Détails supplémentaires */}
-              <div className="mb-5 grid grid-cols-2 gap-3 text-sm">
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Taux</p>
-                  <p>6% - 10%</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Durée</p>
-                  <p>12 - 36 mois</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Garanties</p>
-                  <p>Hypothèque, caution</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Délai</p>
-                  <p>4 - 6 semaines</p>
-                </div>
-              </div>
-
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("immobilierForm")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="w-full py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors"
+        {/* Production d'énergie renouvelable */}
+        <div className="mb-16">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-16 h-16 flex-shrink-0 bg-gray-100 rounded-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-green-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                Déposer un dossier
-              </button>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800">
+                Production d&apos;énergie renouvelable
+              </h3>
+              <p className="text-gray-600">
+                Solaire sur toiture, agrivoltaïque, éolien offshore, éolien
+                terrestre, méthanisation, géothermie, cogénération, stockage...
+              </p>
             </div>
           </div>
 
-          {/* Promotion immobilière */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
-            <div className="relative h-48">
-              <Image
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Promotion immobilière"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">
-                    Promotion immobilière
-                  </h3>
-                  <p className="text-sm">
-                    Financement jusqu&apos;à 10 000 000 €
-                  </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Financement projet (SPV) */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all border-t-4 border-green-500">
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-4 text-green-700">
+                  Financement projet (SPV)
+                </h4>
+                <p className="text-gray-700 font-semibold mb-2">
+                  Utilisation des fonds
+                </p>
+                <ul className="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                  <li>Développement de projets d&apos;énergie</li>
+                  <li>Refinancement des fonds propres</li>
+                  <li>Complément des financements bancaires</li>
+                </ul>
+
+                {/* Détails supplémentaires */}
+                <div className="mb-5 space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">TRI</span>
+                    <span className="text-green-700 font-bold">3 à 4%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">Durée</span>
+                    <span>Jusqu&apos;à 5 ans</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">
+                      Ticket minimum
+                    </span>
+                    <span>Sans limite</span>
+                  </div>
                 </div>
+
+                <button
+                  onClick={() => showForm("immobilierForm")}
+                  className="w-full py-3 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 transition-colors"
+                >
+                  S&apos;INSCRIRE AU DOSSIER
+                </button>
               </div>
             </div>
-            <div className="p-6">
-              <p className="text-gray-600 mb-4">
-                Financement pour des projets de promotion immobilière, de la
-                conception à la commercialisation.
-              </p>
 
-              {/* Détails supplémentaires */}
-              <div className="mb-5 grid grid-cols-2 gap-3 text-sm">
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Taux</p>
-                  <p>8% - 12%</p>
+            {/* Financement corporate (holding) */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all border-t-4 border-green-500">
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-4 text-green-700">
+                  Financement corporate (holding)
+                </h4>
+                <p className="text-gray-700 font-semibold mb-2">
+                  Utilisation des fonds
+                </p>
+                <ul className="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                  <li>Développement de projets d&apos;énergie</li>
+                  <li>Financement des projets (SPV)</li>
+                  <li>Croissance externe</li>
+                  <li>Refinancement des fonds propres (développement)</li>
+                </ul>
+
+                {/* Détails supplémentaires */}
+                <div className="mb-5 space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">TRI</span>
+                    <span className="text-green-700 font-bold">4 à 5%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">Durée</span>
+                    <span>Jusqu&apos;à 6 ans</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">
+                      Ticket minimum
+                    </span>
+                    <span>Sans limite</span>
+                  </div>
                 </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Durée</p>
-                  <p>18 - 48 mois</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Garanties</p>
-                  <p>Hypothèque, GFA</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">LTV max</p>
-                  <p>Jusqu&apos;à 80%</p>
-                </div>
+
+                <button
+                  onClick={() => showForm("promotionForm")}
+                  className="w-full py-3 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 transition-colors"
+                >
+                  S&apos;INSCRIRE AU DOSSIER
+                </button>
               </div>
+            </div>
 
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("promotionForm")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="w-full py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors"
+            {/* Parts coopératives (capital) */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all border-t-4 border-green-500 relative">
+              <div className="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-3 py-1 transform translate-x-6 rotate-45 origin-bottom-left">
+                Populaire
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-4 text-green-700">
+                  Parts coopératives (capital)
+                </h4>
+                <p className="text-gray-700 font-semibold mb-2">
+                  Utilisation des fonds
+                </p>
+                <ul className="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                  <li>Financement de projets d&apos;énergie renouvelable</li>
+                  <li>Coopérative énergétique</li>
+                  <li>Participation à la transition</li>
+                </ul>
+
+                {/* Détails supplémentaires */}
+                <div className="mb-5 space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">TRI</span>
+                    <span className="text-green-700 font-bold">
+                      Selon les résultats
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">Durée</span>
+                    <span>Sans limite</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">
+                      Ticket minimum
+                    </span>
+                    <span>100€</span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => showForm("entrepriseForm")}
+                  className="w-full py-3 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 transition-colors"
+                >
+                  S&apos;INSCRIRE AU DOSSIER
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Promotion immobilière */}
+        <div className="mb-16">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-16 h-16 flex-shrink-0 bg-gray-100 rounded-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-blue-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                Déposer un dossier
-              </button>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800">
+                Promotion immobilière
+              </h3>
+              <p className="text-gray-600">
+                Résidentiel, commercial, mixte et de bureaux.
+              </p>
             </div>
           </div>
 
-          {/* Croissance d'entreprise */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
-            <div className="relative h-48">
-              <Image
-                src="https://images.unsplash.com/photo-1664575599736-c5197c684128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Croissance d'entreprise"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">
-                    Croissance d&apos;entreprise
-                  </h3>
-                  <p className="text-sm">
-                    Financement jusqu&apos;à 3 000 000 €
-                  </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Prêt subordonné (junior) */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all border-t-4 border-blue-500">
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-4 text-blue-700">
+                  Prêt subordonné (junior)
+                </h4>
+                <p className="text-gray-700 font-semibold mb-2">
+                  Utilisation des fonds
+                </p>
+                <ul className="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                  <li>Financement partiel (junior)</li>
+                  <li>Financement des travaux</li>
+                  <li>Financement des réserves</li>
+                  <li>Complément des financements bancaires</li>
+                </ul>
+
+                {/* Détails supplémentaires */}
+                <div className="mb-5 space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">TRI</span>
+                    <span className="text-blue-700 font-bold">4.5 à 5%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">Durée</span>
+                    <span>2 à 3 ans</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">
+                      Ticket minimum
+                    </span>
+                    <span>100€</span>
+                  </div>
                 </div>
+
+                <button
+                  onClick={() => showForm("immobilierForm")}
+                  className="w-full py-3 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  S&apos;INSCRIRE AU DOSSIER
+                </button>
               </div>
             </div>
-            <div className="p-6">
-              <p className="text-gray-600 mb-4">
-                Financement pour soutenir la croissance de votre entreprise,
-                l&apos;expansion ou le développement de nouveaux produits.
-              </p>
 
-              {/* Détails supplémentaires */}
-              <div className="mb-5 grid grid-cols-2 gap-3 text-sm">
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Taux</p>
-                  <p>7% - 11%</p>
+            {/* Prêt hypothécaire (marchand de biens) */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all border-t-4 border-blue-500">
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-4 text-blue-700">
+                  Prêt hypothécaire (marchand de biens)
+                </h4>
+                <p className="text-gray-700 font-semibold mb-2">
+                  Utilisation des fonds
+                </p>
+                <ul className="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                  <li>Acquisition avec travaux de rénovation</li>
+                  <li>Jusqu&apos;à 70% de financement</li>
+                </ul>
+
+                {/* Détails supplémentaires */}
+                <div className="mb-5 space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">TRI</span>
+                    <span className="text-blue-700 font-bold">4 à 4.5%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">Durée</span>
+                    <span>1 à 2 ans</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">
+                      Ticket minimum
+                    </span>
+                    <span>100€</span>
+                  </div>
                 </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Durée</p>
-                  <p>12 - 60 mois</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Éligibilité</p>
-                  <p>CA &gt; 500K€</p>
-                </div>
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="font-semibold text-purple-700">Délai</p>
-                  <p>3 - 5 semaines</p>
-                </div>
+
+                <button
+                  onClick={() => showForm("promotionForm")}
+                  className="w-full py-3 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  S&apos;INSCRIRE AU DOSSIER
+                </button>
               </div>
+            </div>
 
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("entrepriseForm")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="w-full py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors"
+            {/* Co-invest (Equity) */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all border-t-4 border-blue-500 relative">
+              <div className="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-3 py-1 transform translate-x-6 rotate-45 origin-bottom-left">
+                Populaire
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-4 text-blue-700">
+                  Co-invest (Equity)
+                </h4>
+                <p className="text-gray-700 font-semibold mb-2">
+                  Utilisation des fonds
+                </p>
+                <ul className="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                  <li>Apport en fonds propres (equity)</li>
+                  <li>Financement des travaux</li>
+                </ul>
+
+                {/* Détails supplémentaires */}
+                <div className="mb-5 space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">TRI</span>
+                    <span className="text-blue-700 font-bold">4 à 6%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">Durée</span>
+                    <span>Selon le projet</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">
+                      Ticket minimum
+                    </span>
+                    <span>100€</span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => showForm("entrepriseForm")}
+                  className="w-full py-3 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  S&apos;INSCRIRE AU DOSSIER
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* PME durable */}
+        <div className="mb-16">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-16 h-16 flex-shrink-0 bg-gray-100 rounded-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-purple-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                Déposer un dossier
-              </button>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800">PME durable</h3>
+              <p className="text-gray-600">
+                Financement de la résilience de votre entreprise.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-16">
+            {/* Prêt Prozi */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all border-t-4 border-purple-500">
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-4 text-purple-700">
+                  Prêt Prozi
+                </h4>
+                <p className="text-gray-700 font-semibold mb-2">
+                  Utilisation des fonds
+                </p>
+                <ul className="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                  <li>Soutien aux projets d&apos;investissement</li>
+                  <li>Financement de la croissance</li>
+                  <li>Fonds de roulement</li>
+                  <li>Marketing et communication</li>
+                  <li>Actifs immatériels</li>
+                </ul>
+
+                {/* Détails supplémentaires */}
+                <div className="mb-5 space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">TRI</span>
+                    <span className="text-purple-700 font-bold">2 à 3%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">Durée</span>
+                    <span>3 à 5 ans</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">
+                      Ticket minimum
+                    </span>
+                    <span>100€</span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => showForm("immobilierForm")}
+                  className="w-full py-3 bg-purple-600 text-white text-sm font-medium rounded-md hover:bg-purple-700 transition-colors"
+                >
+                  S&apos;INSCRIRE AU DOSSIER
+                </button>
+              </div>
+            </div>
+
+            {/* Prêt subordonné */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all border-t-4 border-purple-500">
+              <div className="p-6">
+                <h4 className="text-xl font-bold mb-4 text-purple-700">
+                  Prêt subordonné
+                </h4>
+                <p className="text-gray-700 font-semibold mb-2">
+                  Utilisation des fonds
+                </p>
+                <ul className="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+                  <li>Investissement à la création</li>
+                  <li>Financement de la R&D</li>
+                  <li>Fonds de roulement</li>
+                </ul>
+
+                {/* Détails supplémentaires */}
+                <div className="mb-5 space-y-3 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">TRI</span>
+                    <span className="text-purple-700 font-bold">3 à 4%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">Durée</span>
+                    <span>3 à 5 ans</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold text-gray-700">
+                      Ticket minimum
+                    </span>
+                    <span>100€</span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => showForm("entrepriseForm")}
+                  className="w-full py-3 bg-purple-600 text-white text-sm font-medium rounded-md hover:bg-purple-700 transition-colors"
+                >
+                  S&apos;INSCRIRE AU DOSSIER
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -299,6 +577,168 @@ export default function FinancingRequestPage() {
           <h3 className="font-bold text-gray-800">
             NOUS VOUS RECONTACTONS DANS LES 48H
           </h3>
+        </div>
+      </div>
+
+      {/* Advantages section */}
+      <div className="bg-amber-100 py-12 px-4 mb-12">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+            Avantages
+          </h2>
+          <p className="text-center mb-10 max-w-3xl mx-auto text-gray-700">
+            Lendimmopme est le partenaire fiable pour votre levée de fonds. Nous
+            combinons financement et promotion de votre projet ou de votre
+            entreprise durable.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Column 1 */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-center mb-4">
+                <div className="bg-teal-100 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8 text-teal-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4 text-gray-800">
+                Outils de financement
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-center">
+                  <span className="mr-2 text-teal-500">•</span>
+                  Présentation de l&apos;offre financière
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-teal-500">•</span>
+                  Offres projets ciblés
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-teal-500">•</span>
+                  Financement participatif
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-teal-500">•</span>
+                  Analyse complète de fonds
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-teal-500">•</span>
+                  Conseil en stratégie de financement
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 2 */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-center mb-4">
+                <div className="bg-purple-100 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8 text-purple-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4 text-gray-800">
+                Outils de communication et commercialisation
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-center">
+                  <span className="mr-2 text-purple-500">•</span>
+                  Offre marketing
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-purple-500">•</span>
+                  Contenus promotionnels
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-purple-500">•</span>
+                  Accès aux plateformes génération d&apos;investisseurs
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3 */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-center mb-4">
+                <div className="bg-blue-100 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4 text-gray-800">
+                Soutien juridique et fiscal
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-center">
+                  <span className="mr-2 text-blue-500">•</span>
+                  Analyse légale de votre dossier
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-blue-500">•</span>
+                  Optimisation fiscale
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-blue-500">•</span>
+                  Solutions SCPI avantageuses
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 text-blue-500">•</span>
+                  Conseils juridiques clés
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-gray-700 mb-2">Vous avez des questions ?</p>
+            <p className="text-lg font-semibold">
+              Complétez notre{" "}
+              <a href="#" className="text-purple-600 hover:underline">
+                formulaire de contact
+              </a>{" "}
+              ou contactez-nous directement à{" "}
+              <a
+                href="mailto:support@lendimmopme.com"
+                className="text-purple-600 hover:underline"
+              >
+                support@lendimmopme.com
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 
@@ -336,6 +776,9 @@ export default function FinancingRequestPage() {
             <div
               id="immobilierForm"
               className="scroll-mt-24 bg-gray-50 p-8 rounded-xl"
+              style={{
+                display: activeForm === "immobilierForm" ? "block" : "none",
+              }}
             >
               <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
                 Financement de projet immobilier
@@ -526,6 +969,9 @@ export default function FinancingRequestPage() {
             <div
               id="promotionForm"
               className="scroll-mt-24 bg-gray-50 p-8 rounded-xl"
+              style={{
+                display: activeForm === "promotionForm" ? "block" : "none",
+              }}
             >
               <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
                 Financement de promotion immobilière
@@ -723,6 +1169,9 @@ export default function FinancingRequestPage() {
             <div
               id="entrepriseForm"
               className="scroll-mt-24 bg-gray-50 p-8 rounded-xl"
+              style={{
+                display: activeForm === "entrepriseForm" ? "block" : "none",
+              }}
             >
               <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
                 Financement de croissance d&apos;entreprise
