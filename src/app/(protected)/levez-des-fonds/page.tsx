@@ -177,7 +177,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Ticket minimum
                     </span>
-                    <span>Sans limite</span>
+                    <span>75.000€</span>
                   </div>
                 </div>
 
@@ -220,7 +220,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Ticket minimum
                     </span>
-                    <span>Sans limite</span>
+                    <span>75.000€</span>
                   </div>
                 </div>
 
@@ -267,7 +267,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Ticket minimum
                     </span>
-                    <span>100€</span>
+                    <span>50.000€</span>
                   </div>
                 </div>
 
@@ -342,7 +342,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Ticket minimum
                     </span>
-                    <span>100€</span>
+                    <span>50.000€</span>
                   </div>
                 </div>
 
@@ -383,7 +383,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Ticket minimum
                     </span>
-                    <span>100€</span>
+                    <span>50.000€</span>
                   </div>
                 </div>
 
@@ -427,7 +427,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Ticket minimum
                     </span>
-                    <span>100€</span>
+                    <span>50.000€</span>
                   </div>
                 </div>
 
@@ -501,7 +501,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Ticket minimum
                     </span>
-                    <span>100€</span>
+                    <span>50.000€</span>
                   </div>
                 </div>
 
@@ -543,7 +543,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Ticket minimum
                     </span>
-                    <span>100€</span>
+                    <span>50.000€</span>
                   </div>
                 </div>
 

@@ -429,11 +429,11 @@ export default function ProjectDetailPage() {
                         value={investAmount}
                         onChange={(e) => setInvestAmount(e.target.value)}
                         className="w-full p-3 border rounded-md"
-                        min="1000"
+                        min="50000"
                         required
                       />
                       <p className="text-xs text-gray-500 mt-1">
-                        Montant minimum : 1 000 €
+                        Montant minimum : 50 000 €
                       </p>
                     </div>
 
