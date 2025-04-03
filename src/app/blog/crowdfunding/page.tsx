@@ -474,7 +474,7 @@ export default function pages() {
                   pour garantir qualité et sécurité à nos investisseurs.
                 </p>
                 <div className="flex items-center text-purple-600">
-                  <span>Lire l'article</span>
+                  <span>Lire l&apos;article</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 ml-2"
@@ -504,14 +504,14 @@ export default function pages() {
               <div className="p-6">
                 <h4 className="text-xl font-bold text-gray-800 mb-2">
                   Crowdfunding : les clés pour commencer à investir dans
-                  l'économie réelle
+                  l&apos;économie réelle
                 </h4>
                 <p className="text-gray-600 mb-4">
                   Découvrez les avantages et les risques du crowdfunding et
-                  comment commencer à investir dans l'économie réelle.
+                  comment commencer à investir dans l&apos;économie réelle.
                 </p>
                 <div className="flex items-center text-purple-600">
-                  <span>Lire l'article</span>
+                  <span>Lire l&apos;article</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 ml-2"
