@@ -1,55 +1,30 @@
 "use client";
-
-import { useState } from "react";
+/* import { useState } from "react";*/
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/projectsData";
-import sendEmail from "@/actions/levezEmail";
-
+/* import sendEmail from "@/actions/levezEmail";
+ */
 export default function FinancingRequestPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  // Add state to track which form to display
-  const [activeForm, setActiveForm] = useState<string | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Get form data
-      const formData = new FormData(e.currentTarget);
-
-      // Send email
-      const result = await sendEmail(formData);
-
-      if (result.success) {
-        // Set submitted state to true
-        setIsSubmitted(true);
-      } else {
-        console.error("Failed to send email:", result.error);
-        alert("Une erreur est survenue. Veuillez réessayer plus tard.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Une erreur est survenue. Veuillez réessayer plus tard.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  // Select a few featured projects to display
 
   // Select a few featured projects to display
   const featuredProjects = projects
     .filter((project) => project.progress > 50) // Only show projects with good progress
     .slice(0, 3); // Limit to 3 projects
 
-  // Function to handle form selection
+  // Function to handle form selection - updated to navigate to separate form pages
   const showForm = (formId: string) => {
-    setActiveForm(formId);
-    // Scroll to the form section
-    setTimeout(() => {
-      document.getElementById(formId)?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+    // Navigate to the appropriate form page instead of showing the form on the same page
+    if (formId === "immobilierForm") {
+      window.location.href = "/levez-des-fonds/immobilier";
+    } else if (formId === "promotionForm") {
+      window.location.href = "/levez-des-fonds/promotion";
+    } else if (formId === "entrepriseForm") {
+      window.location.href = "/levez-des-fonds/entreprise";
+    } else if (formId === "energieForm") {
+      window.location.href = "/levez-des-fonds/energie-renouvelable";
+    }
   };
 
   // ... rest of your component remains the same
@@ -182,10 +157,10 @@ export default function FinancingRequestPage() {
                 </div>
 
                 <button
-                  onClick={() => showForm("immobilierForm")}
+                  onClick={() => showForm("energieForm")}
                   className="w-full py-3 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 transition-colors"
                 >
-                  S&apos;INSCRIRE AU DOSSIER
+                  Déposer un dossier
                 </button>
               </div>
             </div>
@@ -225,10 +200,10 @@ export default function FinancingRequestPage() {
                 </div>
 
                 <button
-                  onClick={() => showForm("promotionForm")}
+                  onClick={() => showForm("energieForm")}
                   className="w-full py-3 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 transition-colors"
                 >
-                  S&apos;INSCRIRE AU DOSSIER
+                  Déposer un dossier
                 </button>
               </div>
             </div>
@@ -272,10 +247,10 @@ export default function FinancingRequestPage() {
                 </div>
 
                 <button
-                  onClick={() => showForm("entrepriseForm")}
+                  onClick={() => showForm("energieForm")}
                   className="w-full py-3 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 transition-colors"
                 >
-                  S&apos;INSCRIRE AU DOSSIER
+                  Déposer un dossier
                 </button>
               </div>
             </div>
@@ -347,10 +322,10 @@ export default function FinancingRequestPage() {
                 </div>
 
                 <button
-                  onClick={() => showForm("immobilierForm")}
+                  onClick={() => showForm("promotionForm")}
                   className="w-full py-3 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
                 >
-                  S&apos;INSCRIRE AU DOSSIER
+                  Déposer un dossier
                 </button>
               </div>
             </div>
@@ -391,7 +366,7 @@ export default function FinancingRequestPage() {
                   onClick={() => showForm("promotionForm")}
                   className="w-full py-3 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
                 >
-                  S&apos;INSCRIRE AU DOSSIER
+                  Déposer un dossier
                 </button>
               </div>
             </div>
@@ -432,10 +407,10 @@ export default function FinancingRequestPage() {
                 </div>
 
                 <button
-                  onClick={() => showForm("entrepriseForm")}
+                  onClick={() => showForm("promotionForm")}
                   className="w-full py-3 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
                 >
-                  S&apos;INSCRIRE AU DOSSIER
+                  Déposer un dossier
                 </button>
               </div>
             </div>
@@ -506,10 +481,10 @@ export default function FinancingRequestPage() {
                 </div>
 
                 <button
-                  onClick={() => showForm("immobilierForm")}
+                  onClick={() => showForm("entrepriseForm")}
                   className="w-full py-3 bg-purple-600 text-white text-sm font-medium rounded-md hover:bg-purple-700 transition-colors"
                 >
-                  S&apos;INSCRIRE AU DOSSIER
+                  Déposer un dossier
                 </button>
               </div>
             </div>
@@ -551,7 +526,7 @@ export default function FinancingRequestPage() {
                   onClick={() => showForm("entrepriseForm")}
                   className="w-full py-3 bg-purple-600 text-white text-sm font-medium rounded-md hover:bg-purple-700 transition-colors"
                 >
-                  S&apos;INSCRIRE AU DOSSIER
+                  Déposer un dossier
                 </button>
               </div>
             </div>
@@ -742,661 +717,7 @@ export default function FinancingRequestPage() {
         </div>
       </div>
 
-      {isSubmitted ? (
-        <div className="max-w-3xl mx-auto text-center py-12">
-          {/* Success message remains unchanged */}
-          <div className="bg-green-100 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-12 text-green-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-          </div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Merci pour votre demande !
-          </h2>
-          <p className="text-xl text-gray-600">
-            Nous ANALYSONS votre dossier, nous vous contacterons sous 48h.
-          </p>
-        </div>
-      ) : (
-        <>
-          {/* Formulaires spécifiques */}
-          <div className="space-y-16">
-            {/* Formulaire Projet Immobilier */}
-            <div
-              id="immobilierForm"
-              className="scroll-mt-24 bg-gray-50 p-8 rounded-xl"
-              style={{
-                display: activeForm === "immobilierForm" ? "block" : "none",
-              }}
-            >
-              <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-                Financement de projet immobilier
-              </h2>
-
-              <form
-                onSubmit={handleSubmit}
-                className="max-w-3xl mx-auto space-y-6"
-              >
-                <input type="hidden" name="projectType" value="immobilier" />
-
-                <div className="space-y-2">
-                  <label htmlFor="companyName" className="block font-medium">
-                    Nom de l&apos;entreprise
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="companyName"
-                    name="companyName"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label htmlFor="firstName" className="block font-medium">
-                      Prénom<span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full p-3 border rounded-md"
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="lastName" className="block font-medium">
-                      Nom<span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full p-3 border rounded-md"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="legalForm" className="block font-medium">
-                    Forme juridique<span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    id="legalForm"
-                    name="legalForm"
-                    className="w-full p-3 border rounded-md bg-white"
-                    required
-                    defaultValue={""}
-                  >
-                    <option value="" disabled>
-                      Choisissez une option
-                    </option>
-                    <option value="sarl">SARL</option>
-                    <option value="sas">SAS</option>
-                    <option value="eurl">EURL</option>
-                    <option value="ei">Entreprise Individuelle</option>
-                    <option value="sc">Société Civile</option>
-                    <option value="sci">SCI</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="siret" className="block font-medium">
-                    N° d&apos;immatriculation (SIRET)
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="siret"
-                    name="siret"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="block font-medium">
-                    Numéro de téléphone<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="email" className="block font-medium">
-                    Email<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="propertyType" className="block font-medium">
-                    Type de bien<span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    id="propertyType"
-                    name="propertyType"
-                    className="w-full p-3 border rounded-md bg-white"
-                    required
-                    defaultValue={""}
-                  >
-                    <option value="" disabled>
-                      Choisissez une option
-                    </option>
-                    <option value="residential">Résidentiel</option>
-                    <option value="commercial">Commercial</option>
-                    <option value="mixed">Mixte</option>
-                    <option value="land">Terrain</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="amount" className="block font-medium">
-                    Montant recherché (€)<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="number"
-                    id="amount"
-                    name="amount"
-                    min="100000"
-                    max="5000000"
-                    step="10000"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="projectDescription"
-                    className="block font-medium"
-                  >
-                    Description du projet<span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    id="projectDescription"
-                    name="projectDescription"
-                    rows={5}
-                    className="w-full p-3 border rounded-md"
-                    required
-                    placeholder="Décrivez votre projet immobilier (localisation, surface, état actuel, travaux prévus, etc.)"
-                  ></textarea>
-                </div>
-
-                <div className="flex justify-end">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`px-6 py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-orange-600 ${
-                      isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-                    }`}
-                  >
-                    {isSubmitting
-                      ? "Envoi en cours..."
-                      : "Soumettre ma demande"}
-                  </button>
-                </div>
-              </form>
-            </div>
-
-            {/* Formulaire Promotion Immobilière */}
-            <div
-              id="promotionForm"
-              className="scroll-mt-24 bg-gray-50 p-8 rounded-xl"
-              style={{
-                display: activeForm === "promotionForm" ? "block" : "none",
-              }}
-            >
-              <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-                Financement de promotion immobilière
-              </h2>
-
-              <form
-                onSubmit={handleSubmit}
-                className="max-w-3xl mx-auto space-y-6"
-              >
-                <input type="hidden" name="projectType" value="promotion" />
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="companyName_promo"
-                    className="block font-medium"
-                  >
-                    Nom de l&apos;entreprise
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="companyName_promo"
-                    name="companyName"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="firstName_promo"
-                      className="block font-medium"
-                    >
-                      Prénom<span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName_promo"
-                      name="firstName"
-                      className="w-full p-3 border rounded-md"
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="lastName_promo"
-                      className="block font-medium"
-                    >
-                      Nom<span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName_promo"
-                      name="lastName"
-                      className="w-full p-3 border rounded-md"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="legalForm_promo"
-                    className="block font-medium"
-                  >
-                    Forme juridique<span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    id="legalForm_promo"
-                    name="legalForm"
-                    className="w-full p-3 border rounded-md bg-white"
-                    required
-                    defaultValue={""}
-                  >
-                    <option value="" disabled>
-                      Choisissez une option
-                    </option>
-                    <option value="sarl">SARL</option>
-                    <option value="sas">SAS</option>
-                    <option value="sccv">SCCV</option>
-                    <option value="sci">SCI</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="siret_promo" className="block font-medium">
-                    N° d&apos;immatriculation (SIRET)
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="siret_promo"
-                    name="siret"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="phone_promo" className="block font-medium">
-                    Numéro de téléphone<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone_promo"
-                    name="phone"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="email_promo" className="block font-medium">
-                    Email<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email_promo"
-                    name="email"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="projectLocation"
-                    className="block font-medium"
-                  >
-                    Localisation du projet
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="projectLocation"
-                    name="projectLocation"
-                    className="w-full p-3 border rounded-md"
-                    required
-                    placeholder="Ville, département"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="amount_promo" className="block font-medium">
-                    Montant recherché (€)<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="number"
-                    id="amount_promo"
-                    name="amount"
-                    min="500000"
-                    max="10000000"
-                    step="100000"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="projectDescription_promo"
-                    className="block font-medium"
-                  >
-                    Description du projet<span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    id="projectDescription_promo"
-                    name="projectDescription"
-                    rows={5}
-                    className="w-full p-3 border rounded-md"
-                    required
-                    placeholder="Décrivez votre projet de promotion (nombre de logements, surface, calendrier prévisionnel, etc.)"
-                  ></textarea>
-                </div>
-
-                <div className="flex justify-end">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`px-6 py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-orange-600 ${
-                      isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-                    }`}
-                  >
-                    {isSubmitting
-                      ? "Envoi en cours..."
-                      : "Soumettre ma demande"}
-                  </button>
-                </div>
-              </form>
-            </div>
-
-            {/* Formulaire Croissance d'entreprise */}
-            <div
-              id="entrepriseForm"
-              className="scroll-mt-24 bg-gray-50 p-8 rounded-xl"
-              style={{
-                display: activeForm === "entrepriseForm" ? "block" : "none",
-              }}
-            >
-              <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-                Financement de croissance d&apos;entreprise
-              </h2>
-
-              <form
-                onSubmit={handleSubmit}
-                className="max-w-3xl mx-auto space-y-6"
-              >
-                <input type="hidden" name="projectType" value="entreprise" />
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="companyName_ent"
-                    className="block font-medium"
-                  >
-                    Nom de l&apos;entreprise
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="companyName_ent"
-                    name="companyName"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="firstName_ent"
-                      className="block font-medium"
-                    >
-                      Prénom<span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName_ent"
-                      name="firstName"
-                      className="w-full p-3 border rounded-md"
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="lastName_ent" className="block font-medium">
-                      Nom<span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName_ent"
-                      name="lastName"
-                      className="w-full p-3 border rounded-md"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="position" className="block font-medium">
-                    Fonction dans l&apos;entreprise
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="position"
-                    name="position"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="legalForm_ent" className="block font-medium">
-                    Forme juridique<span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    id="legalForm_ent"
-                    name="legalForm"
-                    className="w-full p-3 border rounded-md bg-white"
-                    required
-                    defaultValue={""}
-                  >
-                    <option value="" disabled>
-                      Choisissez une option
-                    </option>
-                    <option value="sarl">SARL</option>
-                    <option value="sas">SAS</option>
-                    <option value="sa">SA</option>
-                    <option value="eurl">EURL</option>
-                    <option value="ei">Entreprise Individuelle</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="siret_ent" className="block font-medium">
-                    N° d&apos;immatriculation (SIRET)
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="siret_ent"
-                    name="siret"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="phone_ent" className="block font-medium">
-                    Numéro de téléphone<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone_ent"
-                    name="phone"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="email_ent" className="block font-medium">
-                    Email<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email_ent"
-                    name="email"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="website" className="block font-medium">
-                    Site web <span className="text-gray-500">(facultatif)</span>
-                  </label>
-                  <input
-                    type="url"
-                    id="website"
-                    name="website"
-                    className="w-full p-3 border rounded-md"
-                    placeholder="https://www.example.com"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="businessSector" className="block font-medium">
-                    Secteur d&apos;activité
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    id="businessSector"
-                    name="businessSector"
-                    className="w-full p-3 border rounded-md bg-white"
-                    required
-                    defaultValue={""}
-                  >
-                    <option value="" disabled>
-                      Choisissez une option
-                    </option>
-                    <option value="tech">Technologie</option>
-                    <option value="retail">Commerce de détail</option>
-                    <option value="manufacturing">Industrie</option>
-                    <option value="services">Services</option>
-                    <option value="health">Santé</option>
-                    <option value="food">Alimentation</option>
-                    <option value="energy">Énergie</option>
-                    <option value="other">Autre</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="amount_ent" className="block font-medium">
-                    Montant recherché (€)<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="number"
-                    id="amount_ent"
-                    name="amount"
-                    min="50000"
-                    max="3000000"
-                    step="10000"
-                    className="w-full p-3 border rounded-md"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label
-                    htmlFor="projectDescription_ent"
-                    className="block font-medium"
-                  >
-                    Description du projet<span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    id="projectDescription_ent"
-                    name="projectDescription"
-                    rows={5}
-                    className="w-full p-3 border rounded-md"
-                    required
-                    placeholder="Décrivez votre projet de croissance (objectifs, utilisation des fonds, calendrier prévisionnel, etc.)"
-                  ></textarea>
-                </div>
-
-                <div className="flex justify-end">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`px-6 py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-orange-600 ${
-                      isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-                    }`}
-                  >
-                    {isSubmitting
-                      ? "Envoi en cours..."
-                      : "Soumettre ma demande"}
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </>
-      )}
+      {/* "Ils nous font confiance" section */}
 
       {/* "Ils nous font confiance" section */}
       <div className="mt-20 pt-12 border-t">
