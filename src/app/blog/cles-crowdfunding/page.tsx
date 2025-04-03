@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import BlogHeader from "@/components/BlogHeader";
 
 export default function pages() {
   return (
     <section className="">
+      <BlogHeader />
       <Image
         className="w-full"
         src="https://a.storyblok.com/f/120264/1890x1063/5c776d444e/investir-dans-l-economie-reelle.png/m/1550x650"
@@ -326,6 +328,57 @@ export default function pages() {
         </div>
       </article>
 
+      
+      {/* Recommandations d'articles */}
+      <div className="w-[90%] md:container mx-auto my-16">
+        <h3 className="text-2xl font-extrabold text-purple-700 mb-8">Articles recommandés</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <Link href="/blog/selection" className="block">
+              <Image 
+                src="https://a.storyblok.com/f/120264/1250x500/3db29d6045/selection-des-projets-chez-wiseed.png/m/1550x650" 
+                alt="Comment sont sélectionnés les projets" 
+                width={600} 
+                height={300}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h4 className="text-xl font-bold text-gray-800 mb-2">Comment sont sélectionnés les projets en crowdfunding chez LendImmoPME ?</h4>
+                <p className="text-gray-600 mb-4">Découvrez notre processus rigoureux de sélection des projets pour garantir qualité et sécurité à nos investisseurs.</p>
+                <div className="flex items-center text-purple-600">
+                  <span>Lire l'article</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </div>
+          
+          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <Link href="/blog/crowdfunding" className="block">
+              <Image 
+                src="https://a.storyblok.com/f/120264/1250x500/58254500c2/crowdfunding-definition.png/m/1550x650" 
+                alt="Qu'est-ce que le crowdfunding" 
+                width={600} 
+                height={300}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h4 className="text-xl font-bold text-gray-800 mb-2">Qu'est-ce que le crowdfunding ? Définition et fonctionnement</h4>
+                <p className="text-gray-600 mb-4">Comprendre les bases du financement participatif, son fonctionnement et ses avantages pour les investisseurs.</p>
+                <div className="flex items-center text-purple-600">
+                  <span>Lire l'article</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+      
       <div className="bg-amber-300 mt-10">
         <Footer />
       </div>
