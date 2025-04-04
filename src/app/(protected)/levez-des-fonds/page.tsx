@@ -142,7 +142,7 @@ export default function FinancingRequestPage() {
                 <div className="mb-5 space-y-3 text-sm">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">TRI</span>
-                    <span className="text-green-700 font-bold">3 à 4%</span>
+                    <span className="text-green-700 font-bold">2.5 à 3.5%</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">Durée</span>
@@ -152,7 +152,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Montant minimum
                     </span>
-                    <span>75.000€</span>
+                    <span>75.000€ - 5.000.000€ </span>
                   </div>
                 </div>
 
@@ -185,7 +185,7 @@ export default function FinancingRequestPage() {
                 <div className="mb-5 space-y-3 text-sm">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">TRI</span>
-                    <span className="text-green-700 font-bold">4 à 5%</span>
+                    <span className="text-green-700 font-bold">3 à 3.5%</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">Durée</span>
@@ -195,7 +195,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Montant minimum
                     </span>
-                    <span>75.000€</span>
+                    <span>75.000€ - 5.000.000€ </span>
                   </div>
                 </div>
 
@@ -242,7 +242,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Montant minimum
                     </span>
-                    <span>50.000€ - 5.000.00€ </span>
+                    <span>50.000€ - 5.000.000€ </span>
                   </div>
                 </div>
 
@@ -307,7 +307,7 @@ export default function FinancingRequestPage() {
                 <div className="mb-5 space-y-3 text-sm">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">TRI</span>
-                    <span className="text-blue-700 font-bold">4.5 à 5%</span>
+                    <span className="text-blue-700 font-bold">3 à 3.5%</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">Durée</span>
@@ -317,7 +317,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Montant minimum
                     </span>
-                    <span>50.000€ - 5.000.00€ </span>
+                    <span>50.000€ - 5.000.000€ </span>
                   </div>
                 </div>
 
@@ -348,7 +348,7 @@ export default function FinancingRequestPage() {
                 <div className="mb-5 space-y-3 text-sm">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">TRI</span>
-                    <span className="text-blue-700 font-bold">4 à 4.5%</span>
+                    <span className="text-blue-700 font-bold">2.8 à 3.5%</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">Durée</span>
@@ -358,7 +358,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Montant minimum
                     </span>
-                    <span>50.000€ - 5.000.00€ </span>
+                    <span>50.000€ - 5.000.000€ </span>
                   </div>
                 </div>
 
@@ -392,7 +392,7 @@ export default function FinancingRequestPage() {
                 <div className="mb-5 space-y-3 text-sm">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">TRI</span>
-                    <span className="text-blue-700 font-bold">4 à 6%</span>
+                    <span className="text-blue-700 font-bold">2.5 à 3.5%</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">Durée</span>
@@ -402,7 +402,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Montant minimum
                     </span>
-                    <span>50.000€ - 5.000.00€ </span>
+                    <span>50.000€ - 5.000.000€ </span>
                   </div>
                 </div>
 
@@ -476,7 +476,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Montant minimum
                     </span>
-                    <span>50.000€ - 5.000.00€ </span>
+                    <span>50.000€ - 5.000.000€ </span>
                   </div>
                 </div>
 
@@ -508,7 +508,9 @@ export default function FinancingRequestPage() {
                 <div className="mb-5 space-y-3 text-sm">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">TRI</span>
-                    <span className="text-purple-700 font-bold">3 à 4%</span>
+                    <span className="text-purple-700 font-bold">
+                      2.5 à 3.5%
+                    </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">Durée</span>
@@ -518,7 +520,7 @@ export default function FinancingRequestPage() {
                     <span className="font-semibold text-gray-700">
                       Montant minimum
                     </span>
-                    <span>50.000€ - 5.000.00€ </span>
+                    <span>50.000€ - 5.000.000€ </span>
                   </div>
                 </div>
 
