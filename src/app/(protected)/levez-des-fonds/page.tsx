@@ -150,7 +150,7 @@ export default function FinancingRequestPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">
-                      Ticket minimum
+                      Montant minimum
                     </span>
                     <span>75.000€</span>
                   </div>
@@ -193,7 +193,7 @@ export default function FinancingRequestPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">
-                      Ticket minimum
+                      Montant minimum
                     </span>
                     <span>75.000€</span>
                   </div>
@@ -240,9 +240,9 @@ export default function FinancingRequestPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">
-                      Ticket minimum
+                      Montant minimum
                     </span>
-                    <span>50.000€</span>
+                    <span>50.000€ - 5.000.00€ </span>
                   </div>
                 </div>
 
@@ -315,9 +315,9 @@ export default function FinancingRequestPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">
-                      Ticket minimum
+                      Montant minimum
                     </span>
-                    <span>50.000€</span>
+                    <span>50.000€ - 5.000.00€ </span>
                   </div>
                 </div>
 
@@ -356,9 +356,9 @@ export default function FinancingRequestPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">
-                      Ticket minimum
+                      Montant minimum
                     </span>
-                    <span>50.000€</span>
+                    <span>50.000€ - 5.000.00€ </span>
                   </div>
                 </div>
 
@@ -400,9 +400,9 @@ export default function FinancingRequestPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">
-                      Ticket minimum
+                      Montant minimum
                     </span>
-                    <span>50.000€</span>
+                    <span>50.000€ - 5.000.00€ </span>
                   </div>
                 </div>
 
@@ -474,9 +474,9 @@ export default function FinancingRequestPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">
-                      Ticket minimum
+                      Montant minimum
                     </span>
-                    <span>50.000€</span>
+                    <span>50.000€ - 5.000.00€ </span>
                   </div>
                 </div>
 
@@ -516,9 +516,9 @@ export default function FinancingRequestPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-700">
-                      Ticket minimum
+                      Montant minimum
                     </span>
-                    <span>50.000€</span>
+                    <span>50.000€ - 5.000.00€ </span>
                   </div>
                 </div>
 
