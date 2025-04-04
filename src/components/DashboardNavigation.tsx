@@ -25,8 +25,8 @@ const NavLink = ({
   const activeClasses = isActive
     ? "font-bold border-b-2 border-white text-white"
     : isMobile
-    ? "hover:text-gray-200"
-    : "text-white/90 hover:text-white";
+      ? "hover:text-gray-200"
+      : "text-white/90 hover:text-white";
 
   return (
     <Link href={href} className={`${baseClasses} ${activeClasses}`}>
@@ -42,7 +42,7 @@ export default function DashboardNavigation() {
     <div className="bg-gradient-to-br from-purple-600 via-purple-700 to-pink-300">
       <div className="container mx-auto px-4 md:px-0">
         <nav className="flex justify-between items-center py-6">
-          <Link href="/levez-des-fonds">
+          <Link href="/">
             <h1 className="text-white font-extrabold text-2xl">LendImmoPME</h1>
           </Link>
           {/* Desktop Menu */}
@@ -105,7 +105,7 @@ export default function DashboardNavigation() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-purple-700 py-4 px-2 flex flex-col gap-4 items-center rounded">
-            <NavLink href="/levez-des-fonds" isMobile={true}>
+            <NavLink href="/" isMobile={true}>
               Levez des fonds
             </NavLink>
             <NavLink href="/investir" isMobile={true}>
