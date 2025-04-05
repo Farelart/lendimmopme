@@ -1,234 +1,170 @@
-"use client";
-
+/* import { Metadata } from "next";
+ */ import Link from "next/link";
 import Image from "next/image";
-import Link from "next/link";
 import { projects } from "@/lib/projectsData";
+import { AlertTriangle } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
 
-export default function InvestmentPage() {
-  // Function to format currency
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat("fr-FR", {
-      style: "currency",
-      currency: "EUR",
-      maximumFractionDigits: 0,
-    }).format(amount);
-  };
+/* export const metadata: Metadata = {
+  title: "Investir | LendImmoPME",
+  description:
+    "Découvrez nos opportunités d'investissement dans l'immobilier et les PME",
+}; */
 
-  // Function to determine the category icon
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case "énergie renouvelable":
-        return (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-yellow-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 10V3L4 14h7v7l9-11h-7z"
-            />
-          </svg>
-        );
-      default:
-        return (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        );
-    }
-  };
+export default function InvestirPage() {
+  // Filtrer les projets actifs et inactifs
+  const activeProjects = projects.filter((project) => project.isActive);
+  const completedProjects = projects.filter((project) => !project.isActive);
 
   return (
-    <div className="px-4 md:px-0 md:container mx-auto py-8">
-      <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-12">
-        Parcs solaires et éoliens sélectionnés dans le portefeuille de GLS
-        Energie AG
-      </h1>
+    <main className="min-h-screen">
+      {/* Section d'avertissement */}
+      <section className="bg-amber-50 border-l-4 border-amber-500 p-8 mb-12">
+        <div className="container mx-auto">
+          <div className="flex items-start gap-4">
+            <AlertTriangle
+              className="text-amber-500 mt-1 flex-shrink-0"
+              size={24}
+            />
+            <div>
+              <h2 className="text-xl font-bold text-amber-800 mb-2">
+                Avertissement sur les risques d'investissement
+              </h2>
+              <p className="text-amber-700 mb-4">
+                Investir dans des projets immobiliers ou des PME comporte des
+                risques, notamment une perte partielle ou totale du capital
+                investi, un risque d'illiquidité et l'absence de garantie de
+                rendement.
+              </p>
+              <p className="text-amber-700">
+                Nous vous recommandons de diversifier vos investissements et de
+                n'investir que des sommes dont vous n'avez pas besoin à court
+                terme. Avant d'investir, prenez le temps d'étudier attentivement
+                chaque projet et de consulter nos{" "}
+                <Link href="/risques" className="underline font-medium">
+                  informations détaillées sur les risques
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="max-w-4xl mx-auto">
-        {projects.map((project) => (
-          <Link
-            key={project.id}
-            href={`/investir/${project.id}`}
-            className="block transition-transform hover:scale-[1.02] mb-8"
-          >
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="relative h-64">
-                {/* Project image */}
-                <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                  {project.image ? (
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                  ) : (
-                    <span className="text-gray-400">Image du projet</span>
-                  )}
-                </div>
-
-                {/* Category icon */}
-                <div className="absolute top-4 left-4 bg-white rounded-full p-2 shadow-md">
-                  {getCategoryIcon(project.category)}
-                </div>
-              </div>
-
-              <div className="p-6">
-                {/* Status indicator */}
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <span className="inline-flex items-center bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full">
-                      <span className="mr-1">●</span>
-                      {project.status}
-                    </span>
+      {/* Section des projets investissables */}
+      <section className="container mx-auto px-4 mb-20">
+        <h2 className="text-3xl font-bold mb-8 text-purple-600">
+          Projets investissables
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {activeProjects.map((project) => (
+            <Link
+              href={`/investir/${project.id}`}
+              key={project.id}
+              className="group"
+            >
+              <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
+                    {project.category}
                   </div>
-                  <div>
-                    <span className="inline-block bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded-full">
-                      {project.category}
-                    </span>
-                  </div>
                 </div>
-
-                {/* Project title */}
-                <h2 className="text-xl font-bold text-gray-800 mb-2">
-                  {project.title}
-                </h2>
-
-                {/* Project description */}
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-
-                {/* Progress bar */}
-                <div className="mb-4">
-                  <div className="flex justify-between text-sm text-gray-600 mb-1">
-                    <span>Progression: {project.progress}%</span>
-                    <span>{formatCurrency(project.amount)}</span>
+                <div className="p-6">
+                  <div className="text-sm text-orange-600 mb-2">
+                    {project.status}
                   </div>
-                  <div className="relative pt-1">
-                    <div className="overflow-hidden h-2 mb-1 text-xs flex rounded bg-gray-200">
-                      <div
-                        style={{ width: `${project.progress}%` }}
-                        className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"
-                      ></div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-purple-600">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-2">
+                    {project.description}
+                  </p>
+
+                  <div className="mb-4">
+                    <div className="flex justify-between text-sm mb-1">
+                      <span>Progression</span>
+                      <span className="font-medium">{project.progress}%</span>
+                    </div>
+                    <Progress value={project.progress} className="h-2" />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="bg-gray-50 p-3 rounded">
+                      <div className="text-gray-500">Rendement annuel</div>
+                      <div className="font-bold text-lg">{project.yield}%</div>
+                    </div>
+                    <div className="bg-gray-50 p-3 rounded">
+                      <div className="text-gray-500">Durée</div>
+                      <div className="font-bold text-lg">
+                        {project.duration}
+                      </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
-                {/* Key details */}
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="bg-gray-50 p-3 rounded-lg text-center">
-                    <p className="text-gray-500 text-xs">Rendement annuel</p>
-                    <p className="font-bold text-purple-600">
-                      {project.yield}%
-                    </p>
-                  </div>
-                  <div className="bg-gray-50 p-3 rounded-lg text-center">
-                    <p className="text-gray-500 text-xs">Durée</p>
-                    <p className="font-bold text-gray-800">
-                      {project.duration} ans
-                    </p>
-                  </div>
+      {/* Section des projets déjà financés */}
+      <section className="container mx-auto px-4 mb-20">
+        <h2 className="text-3xl font-bold mb-8 text-purple-600">
+          Projets déjà financés
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {completedProjects.slice(0, 5).map((project) => (
+            <div
+              key={project.id}
+              className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100"
+            >
+              <div className="relative h-48 w-full">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm">
+                  {project.category}
                 </div>
+              </div>
+              <div className="p-4">
+                <div className="text-sm text-green-600 mb-1">
+                  {project.status}
+                </div>
+                <h3 className="text-lg font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                  {project.description}
+                </p>
 
-                {/* CTA */}
-                <div className="text-center">
-                  <span className="inline-block w-full py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition-colors">
-                    Découvrir l&apos;obligation verte
-                  </span>
+                <div className="flex justify-between text-sm">
+                  <div>
+                    <span className="text-gray-500">Montant</span>
+                    <div className="font-medium">
+                      {project.amount.toLocaleString()} €
+                    </div>
+                  </div>
+                  <div>
+                    <span className="text-gray-500">Rendement</span>
+                    <div className="font-medium">{project.yield}%</div>
+                  </div>
+                  <div>
+                    <span className="text-gray-500">Durée</span>
+                    <div className="font-medium">{project.duration}</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </Link>
-        ))}
-
-        {/* Opportunities and Risks Section */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden mt-8 p-6">
-          <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">
-            Opportunités et risques sélectionnés
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div className="bg-green-50 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-800 mb-3">Opportunités</h3>
-              <ul className="space-y-2">
-                {projects[0].detailedDescription?.opportunitesRisques.opportunites.map(
-                  (item, index) => (
-                    <li key={index} className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-green-500 mr-2 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span className="text-gray-600">{item}</span>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
-
-            <div className="bg-red-50 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-800 mb-3">Risques</h3>
-              <ul className="space-y-2">
-                {projects[0].detailedDescription?.opportunitesRisques.risques.map(
-                  (item, index) => (
-                    <li key={index} className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-red-500 mr-2 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                        />
-                      </svg>
-                      <span className="text-gray-600">{item}</span>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href={`/investir/1`}
-              className="inline-block py-3 px-6 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition-colors"
-            >
-              Souscrire à l&apos;obligation verte maintenant
-            </Link>
-          </div>
+          ))}
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
