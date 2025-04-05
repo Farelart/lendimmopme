@@ -272,6 +272,400 @@ export const projects = [
     duration: "24 mois",
     isActive: false,
   },
+  {
+    id: 8,
+    title: "IMOYA",
+    image:
+      "/imoya1.png",
+    images: [
+      "/imoya1.png",
+      "/imoya2.png",
+      "/imoya3.png",
+    ],
+    category: "Immobilier",
+    status: "En cours de collecte",
+    description:
+      "Groupe de promotion immobilière spécialisé dans la reconversion de biens historiques et religieux, avec une approche durable centrée sur l'intergénérationnel et la préservation des espaces verts.",
+    detailedDescription: `
+      <h2 style="font-weight: bold; margin-bottom: 1rem">Présentation d'IMOYA HOLDING NV</h2>
+      <p>Michel Vanstallen, entrepreneur chevronné, a fondé IMOYA HOLDING NV, un groupe de sociétés de promotion immobilière dont la mission repose sur trois piliers fondamentaux : relier le présent au passé, renforcer les espaces verts, et réunir les générations.</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Notre Vision</h3>
+      <p>IMOYA HOLDING NV se distingue par une approche unique du développement immobilier :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Reconversion de bâtiments historiques et religieux</li>
+        <li>Préservation et valorisation des espaces verts</li>
+        <li>Création de communautés intergénérationnelles</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Notre Expertise</h3>
+      <p>Fort d'une expérience significative dans les secteurs de l'hôtellerie et des soins résidentiels, Michel Vanstallen apporte une perspective unique au développement immobilier, combinant :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Une expertise en gestion de projets complexes</li>
+        <li>Une compréhension approfondie des besoins en hébergement intergénérationnel</li>
+        <li>Une vision durable du développement urbain</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Références Principales</h3>
+      
+      <h4 style="font-weight: bold; margin: 1rem 0">Château Ter Ham</h4>
+      <p>Un projet mixte comprenant :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>20 unités d'habitation (surface totale : 1.985 m²)</li>
+        <li>950 m² d'espaces verts</li>
+        <li>Espace de réception haut-de-gamme</li>
+        <li>Services de santé à la demande</li>
+      </ul>
+
+      <h4 style="font-weight: bold; margin: 1rem 0">Kantkwartier</h4>
+      <p>Ensemble résidentiel en centre-ville comprenant :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>82 appartements</li>
+        <li>Parking souterrain</li>
+        <li>Espace vert intérieur</li>
+      </ul>
+
+      <h4 style="font-weight: bold; margin: 1rem 0">Kantfabriek</h4>
+      <p>Projet de rénovation incluant :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>37 lofts</li>
+        <li>2 espaces de bureaux</li>
+        <li>Conservation de la façade historique</li>
+      </ul>
+    `,
+    progress: 35,
+    amount: 2000000,
+    yield: 10,
+    duration: "4 ans",
+    minInvestment: 1000,
+    highlights: [
+      "Plus de 20 ans d'expérience en développement immobilier",
+      "Spécialiste de la reconversion de bâtiments historiques",
+      "Projets à forte valeur ajoutée environnementale",
+      "Approche unique intergénérationnelle",
+      "Track record prouvé avec des projets d'envergure"
+    ],
+    isFavorite: false,
+    isActive: true,
+  },
+  {
+    id: 9,
+    title: "BIG PROPERTY SAS",
+    image: "/belgique.png",
+    images: [
+      "/belgique.png",
+      "/belgique2.png",
+      "/belgique3.png",
+      "/belgique4.png",
+      "/belgique5.png",
+      "/belgique6.png",
+    ],
+    category: "Immobilier",
+    status: "En cours de collecte",
+    description:
+      "Acquisition et réhabilitation d'une maison de maître du XVIIIe siècle à Oberhausbergen. Projet de division en deux maisons distinctes et création de trois terrains à bâtir, offrant un potentiel de plus-value significatif dans un quartier prisé de Strasbourg.",
+    detailedDescription: `
+      <h2 style="font-weight: bold; margin-bottom: 1rem">Présentation de BIG PROPERTY SAS</h2>
+      <p>BIG PROPERTY SAS, filiale du groupe Imoclaire SAS, est spécialisée dans les activités de marchand de biens. Le groupe, détenu par Monsieur Grégory Bigel, a déjà réalisé de nombreuses opérations de promotion et de marchand de biens, avec actuellement 14 opérations en cours allant de 20.000€ à 10.000.000€.</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Le Projet</h3>
+      <p>Le projet consiste en l'acquisition et la valorisation d'une propriété exceptionnelle :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Une maison de maître du XVIIIe siècle de 973m²</li>
+        <li>Un terrain de 8.020m²</li>
+        <li>Une localisation prime à Oberhausbergen</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Programme de Valorisation</h3>
+      <p>Le projet se décompose en deux volets principaux :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Division de la maison existante en deux maisons mitoyennes</li>
+        <li>Création de 3 terrains à bâtir viabilisés</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Caractéristiques Financières</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Montant du financement : 2.200.000€</li>
+        <li>Prix de revient total : 2.679.276€</li>
+        <li>Chiffre d'affaires prévisionnel : 3.507.400€</li>
+        <li>Marge brute attendue : 828.124€</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Garanties</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Capital 100% assuré par Atradius</li>
+        <li>Hypothèque de 1er rang</li>
+        <li>Caution d'Imoclaire SAS</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Planning</h3>
+      <p>Les principales étapes du projet :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Acquisition prévue : Mars 2025</li>
+        <li>Durée des travaux : 3 mois</li>
+        <li>Commercialisation : Déjà démarrée</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Localisation Stratégique</h3>
+      <p style="font-weight: bold">Adresse : 4a Rue du Chateau, Oberhausbergen 67205</p>
+      <p>Située dans l'Eurométropole de Strasbourg, Oberhausbergen bénéficie d'une excellente accessibilité :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Proximité immédiate de l'Espace Européen de l'Entreprise</li>
+        <li>Accès direct aux autoroutes A355, A35 et A4</li>
+        <li>Desserte en transports en commun optimale</li>
+        <li>Environnement résidentiel prisé</li>
+      </ul>
+    `,
+    progress: 50,
+    amount: 1500000,
+    yield: 8,
+    duration: "2 ans",
+    minInvestment: 2000,
+    highlights: [
+      "Propriété d'exception du XVIIIe siècle",
+      "Localisation premium dans l'Eurométropole de Strasbourg",
+      "LTV expertisé post-travaux de 62%",
+      "Capital 100% assuré par Atradius",
+      "Fort potentiel de plus-value (marge brute 24%)"
+    ],
+    isFavorite: false,
+    isActive: true
+  },
+  {
+    id: 10,
+    title: "SCECIB IMMOBILIER",
+    image: "/secib.png",
+    images: [
+      "/secib.png",
+      "/secib2.png",
+      
+    ],
+    category: "Immobilier",
+    status: "En cours de collecte",
+    description:
+      "Promoteur immobilier coopératif breton, leader de l'accession sociale à la propriété, développant des projets innovants et durables. Plus de 2500 ménages accompagnés dans l'accès à la propriété via des dispositifs d'aide (PSLA et BRS).",
+    detailedDescription: `
+      <h2 style="font-weight: bold; margin-bottom: 1rem">Présentation de SECIB IMMOBILIER</h2>
+      <p>Cette levée de fonds est accessible en France et en Belgique. SECIB Immobilier est un promoteur engagé qui relève un double défi : démocratiser l'accès à la propriété et repenser le logement pour qu'il soit plus durable, inclusif et en harmonie avec son environnement.</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Notre Mission</h3>
+      <p>Fortement ancrée en Bretagne, l'entreprise innove à travers des dispositifs sociaux :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Prêt Social Location-Accession (PSLA)</li>
+        <li>Bail Réel Solidaire (BRS)</li>
+        <li>Accompagnement des ménages modestes vers la propriété</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Notre Engagement</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Construction respectueuse de l'environnement</li>
+        <li>Utilisation de matériaux biosourcés</li>
+        <li>Performance énergétique optimisée</li>
+        <li>Solutions d'habitat bas-carbone</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Structure et Gouvernance</h3>
+      <p>Filiale de la Coopérative Immobilière de Bretagne (CIB), SECIB Immobilier s'inscrit dans un modèle économique solidaire :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Aucun bénéfice redistribué aux détenteurs de parts sociales</li>
+        <li>Réinvestissement intégral des résultats dans l'économie locale</li>
+        <li>2,5 millions d'euros consacrés à l'accession aidée en 2023</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Équipe Dirigeante</h3>
+      <p style="margin-bottom: 0.5rem">Une équipe expérimentée composée de :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Graziella INISAN - Directrice (depuis 2005)</li>
+        <li>Jacques LE GUENNEC - Président</li>
+        <li>Olivier TALMON - Directeur Commercial</li>
+        <li>Stéphanie RUMAS - Directrice RH</li>
+        <li>Aurélie VERDIER - Directrice Administrative et Financière</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Performance et Perspectives</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Chiffre d'affaires 2024 : 30 M€</li>
+        <li>Carnet de commandes : 380 M€ d'opérations d'ici 2030</li>
+        <li>Objectif CA 2027 : 130 M€</li>
+        <li>Plus de 50% des 286 logements en portefeuille en accession aidée</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Impact Social</h3>
+      <p>SECIB Immobilier a déjà permis à 2500 ménages d'accéder à la propriété via l'accession aidée, tout en maintenant une politique RSE ambitieuse axée sur :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Le renouvellement urbain</li>
+        <li>La limitation de l'artificialisation des sols</li>
+        <li>L'innovation dans les matériaux de construction</li>
+        <li>La réduction de l'empreinte carbone</li>
+      </ul>
+    `,
+    progress: 70,
+    amount: 1500000,
+    yield: 12,
+    duration: "1 an",
+    minInvestment: 1000,
+    highlights: [
+      "50% du CA en accession sociale à la propriété",
+      "2500 ménages accompagnés vers la propriété",
+      "380M€ de commandes jusqu'en 2030",
+      "Garantie par le groupe CIB (50M€ de fonds propres)",
+      "Rendement attractif de 12% sur 12 mois"
+    ],
+    isFavorite: false,
+    isActive: true
+  },
+  {
+    id: 11,
+    title: "ALTEN GLOBAL",
+    image: "/alter.png",
+    images: [
+      "/alter.png",
+      "/alter2.png",
+    ],
+    category: "Energie",
+    status: "En cours de collecte",
+    description: 
+      "Développeur et opérateur international d'énergie solaire photovoltaïque, avec 500 MW de puissance installée et 3 GW en développement. Joint-venture stratégique pour accélérer le déploiement de projets en Espagne, Italie et Mexique.",
+    detailedDescription: `
+      <h2 style="font-weight: bold; margin-bottom: 1rem">Présentation d'ALTEN GLOBAL</h2>
+      <p>Créé en 2006, Alten Global est un développeur et opérateur indépendant d'électricité renouvelable basé en Espagne, spécialisé dans le développement de centrales solaires photovoltaïques. L'entreprise maîtrise l'ensemble de la chaîne de valeur, du développement à l'exploitation des centrales.</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Notre Track Record</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Plus de 10 centrales solaires construites en Europe, Mexique et Afrique</li>
+        <li>700 M€ d'investissements réalisés</li>
+        <li>500 MW de puissance installée</li>
+        <li>3 GW de projets en développement en Europe et au Mexique</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Notre Équipe</h3>
+      <p>Une direction expérimentée composée de :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Carlos Castellanos - Co-fondateur (ex-Deutsche Bank)</li>
+        <li>Luis Castellanos - Co-fondateur (ex-Lazard)</li>
+        <li>Juan Laso - Président (fondateur de T-Solar)</li>
+        <li>Maria de Frutos - Directrice du Développement Europe</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Stratégie et Développement</h3>
+      <p>Le modèle économique d'Alten repose sur deux piliers :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Développeur en Espagne : 70 MW en développement</li>
+        <li>Producteur indépendant (IPP) en Italie : 80 MW solaire et 1,5 GW de stockage</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Impact Environnemental</h3>
+      <p>Nos projets en développement permettront :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>337 000 tonnes de CO₂ évitées par an</li>
+        <li>1 680 GWh d'électricité propre produite annuellement</li>
+        <li>537 000 foyers alimentés en énergie verte</li>
+        <li>Équivalent de 30 millions d'arbres plantés par an</li>
+      </ul>,
+,
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Impact Social et Économique</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>30 emplois en phase de développement</li>
+        <li>Plus de 1 000 emplois pendant la construction</li>
+        <li>60 emplois permanents en phase d'exploitation</li>
+        <li>Contribution à la sécurité énergétique locale</li>
+      </ul>
+    `,
+    progress: 35,
+    amount: 1500000,
+    yield: 8.5,
+    duration: "3 ans",
+    minInvestment: 1000,
+    highlights: [
+      "700M€ d'investissements réalisés depuis 2006",
+      "3 GW de projets en développement",
+      "337 000 tonnes de CO₂ évitées par an",
+      "Équipe dirigeante expérimentée (Deutsche Bank, Lazard)",
+      "Présence internationale (Europe, Mexique, Afrique)"
+    ],
+    isFavorite: false,
+    isActive: true
+  },
+  {
+    id: 12,
+    title: "ReNewGreen",
+    image: "/renewgreen.png",
+    images: [
+      "/renewgreen.png",
+      "/renewgreen2.png",
+    ],
+    category: "Industrie",
+    status: "En cours de collecte",
+    description: 
+      "Première usine belge de recyclage de pneus usagés par pyrolyse. Transformation innovante de 20 000 tonnes de pneus par an en produits à haute valeur ajoutée pour l'industrie pétrochimique, avec un processus écologique en circuit fermé.",
+    detailedDescription: `
+      <h2 style="font-weight: bold; margin-bottom: 1rem">Présentation de ReNewGreen</h2>
+      <p>Créée en 2020, ReNewGreen s'apprête à inaugurer à Feluy (Hainaut) la première grande usine de recyclage et de valorisation de pneus usés par pyrolyse en Belgique. Cette technologie de pointe transforme les pneus usés en produits commercialisables de haute valeur ajoutée.</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Le Marché et les Enjeux</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>2 milliards de pneus produits par an dans le monde</li>
+        <li>85 000 tonnes de pneus usés en Belgique</li>
+        <li>Obligation de traitement en Europe depuis mars 2024</li>
+        <li>Besoin urgent d'alternatives aux pratiques actuelles</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Notre Solution Innovante</h3>
+      <p>Le processus de pyrolyse permet de produire annuellement :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>4 000 tonnes d'acier haute qualité</li>
+        <li>8 000 tonnes d'huile de pyrolyse (partenariat BASF)</li>
+        <li>6 400 tonnes de Recycled Carbon Black (rCB)</li>
+        <li>Processus en circuit fermé sans émissions</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Équipe Dirigeante</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Tiziano Baiguera - CEO et Fondateur</li>
+        <li>Edwin Blairon - CFO (Serial entrepreneur)</li>
+        <li>Alexi Petretta - Directeur Administratif</li>
+        <li>COO en cours de recrutement</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Impact Environnemental et Social</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Création de 35-40 emplois directs</li>
+        <li>Traitement de 20 000 tonnes de pneus par an</li>
+        <li>Circuit de recyclage 100% local</li>
+        <li>Réduction significative de l'empreinte carbone</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Modèle Économique</h3>
+      <p>Deux sources de revenus principales :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Vente d'extrants à l'industrie pétrochimique</li>
+        <li>Rémunération pour la récupération des pneus usés</li>
+        <li>Récupération d'une partie de l'éco-contribution</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Perspectives de Développement</h3>
+      <p>ReNewGreen vise une expansion européenne avec :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Ouverture de plusieurs usines en Europe</li>
+        <li>Développement de nouvelles technologies</li>
+        <li>Partenariats industriels stratégiques</li>
+      </ul>
+    `,
+    progress: 35,
+    amount: 1500000,
+    yield: 8.5,
+    duration: "3 ans",
+    minInvestment: 1000,
+    highlights: [
+      "Première usine de pyrolyse de pneus en Belgique",
+      "20 000 tonnes de pneus recyclés par an",
+      "Partenariat stratégique avec BASF",
+      "40 emplois directs créés",
+      "Technologie innovante en circuit fermé"
+    ],
+    isFavorite: false,
+    isActive: true
+  },
 ];
 
 export type Project = (typeof projects)[0];

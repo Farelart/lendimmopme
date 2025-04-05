@@ -92,7 +92,7 @@ export default function InvestirPage() {
         <p className="text-gray-600 mb-8 text-lg">
           Découvrez nos opportunités d&apos;investissement sélectionnées
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {activeProjects.map((project) => (
             <Link
               href={`/investir/${project.id}`}

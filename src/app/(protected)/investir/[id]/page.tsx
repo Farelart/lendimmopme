@@ -6,6 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, Info } from "lucide-react";
 import ProjectImageCarousel from "@/components/ProjectImageCarousel";
 import InvestmentDialog from "@/components/InvestmentDialog";
+import RoiCalculator from "@/components/RoiCalculator";
 
 type PageProps = {
   params: Promise<{
@@ -195,6 +196,12 @@ export default async function ProjectPage({ params }: PageProps) {
                   Projet déjà financé
                 </Button>
               )}
+
+              {/* Remplacer le calculateur de ROI existant par le nouveau composant */}
+              <RoiCalculator 
+                minInvestment={project.minInvestment || 1000} 
+                yield={project.yield} 
+              />
 
               {/* Note d'information avec style amélioré */}
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
