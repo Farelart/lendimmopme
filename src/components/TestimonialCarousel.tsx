@@ -114,7 +114,7 @@ const TestimonialCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       paginate(1);
-    }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -140,7 +140,7 @@ const TestimonialCarousel = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 min-h-[300px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-h-[350px]">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           {testimonials
             .slice(currentIndex, currentIndex + 3)
@@ -167,10 +167,10 @@ const TestimonialCarousel = () => {
                     paginate(-1);
                   }
                 }}
-                className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between h-full"
+                className="bg-white p-6 text-sm rounded-lg flex flex-col gap-1"
               >
                 <p className="flex-grow">{testimonial.text}</p>
-                <div className="flex gap-2 items-center mt-auto">
+                <div className="flex gap-2 items-center mt-4">
                   <span className="bg-amber-950 text-white p-3 rounded-full">
                     {testimonial.initials}
                   </span>
