@@ -6,14 +6,17 @@ import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, Info } from "lucide-react";
 import ProjectImageCarousel from "@/components/ProjectImageCarousel";
 import InvestmentDialog from "@/components/InvestmentDialog";
+
 // ... rest of the file remains unchanged
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  // Add async to the function and await the params
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default async function ProjectPage({ params }: PageProps) {
+  // Destructure id from params first
   const { id: paramId } = await params;
   const id = parseInt(paramId);
   const project = projects.find((p) => p.id === id);
