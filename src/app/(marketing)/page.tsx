@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export default function Page() {
   return (
@@ -182,121 +183,8 @@ export default function Page() {
               mieux placés pour partager leur expérience.
             </p>
           </div>
-          <section className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                Les descriptifs des projets sont détaillés, les analyses sont
-                claires et donnent une bonne idée pour choisir et trier les
-                investissements.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  CP
-                </span>
-                <p>Charles P.</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                Cela fait des années que j&apos;investis sur LendImmoPME, le
-                service client est très accessible et agréable.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  BN
-                </span>
-                <p>Benoit N.</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                Bonne diversité des placements proposés. Parcours de
-                souscription bien construit. Interface satisfaisante.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  SF
-                </span>
-                <p>Sylvain F.</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                J&apos;apprécie particulièrement la transparence des
-                informations et le suivi régulier des projets dans lesquels
-                j&apos;ai investi.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  ML
-                </span>
-                <p>Marie L.</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                La plateforme est intuitive et facile à utiliser. Les rendements
-                sont au rendez-vous et conformes aux prévisions annoncées.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  JD
-                </span>
-                <p>Jean D.</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                Excellente expérience avec LendImmoPME. Les projets immobiliers
-                sont bien sélectionnés et l&apos;équipe répond rapidement à mes
-                questions.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  AT
-                </span>
-                <p>Alexandre T.</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                Je recommande vivement cette plateforme pour la qualité des
-                projets et le professionnalisme de l&apos;équipe. Investir
-                n&apos;a jamais été aussi simple.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  SB
-                </span>
-                <p>Sophie B.</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                Après plusieurs années d&apos;investissement sur LendImmoPME, je
-                suis pleinement satisfait des résultats et de la sécurité
-                offerte par la plateforme.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  PL
-                </span>
-                <p>Pierre L.</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 text-sm rounded-lg flex flex-col gap-8 justify-between">
-              <p>
-                La diversification de mon portefeuille a été grandement
-                facilitée grâce à LendImmoPME. Une valeur sûre dans le
-                crowdfunding immobilier.
-              </p>
-              <div className="flex gap-2 items-center">
-                <span className="bg-amber-950 text-white p-3 rounded-full">
-                  CM
-                </span>
-                <p>Claire M.</p>
-              </div>
-            </div>
+          <section className="container mx-auto">
+            <TestimonialCarousel />
           </section>
         </div>
 
