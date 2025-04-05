@@ -76,10 +76,10 @@ export const projects = [
       <p>Lever minimum 130 000 € avant le 28/04/2025 12:00</p>
 
       <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Condition suspensive n° 2</h3>
-      <ol style="margin-left: 1rem">
-        <li style="margin-bottom: 1rem">L'absence de survenance ou de mise au jour d'évènements, dont LOOKANDFIN n'a pas été informée par le Porteur de Projet préalablement à la conclusion de la présente convention, et qui sont de nature :
-          <ul style="margin: 0.5rem 0 0.5rem 1rem">
-            <li>soit à affecter négativement la valeur de marché du bien à financer par LOOKANDFIN,</li>
+      <ol style="margin-left: 1rem; ">
+        <li style="margin-bottom: 1rem">L'absence de survenance ou de mise au jour d'évènements, dont LENDIMMOPME n'a pas été informée par le Porteur de Projet préalablement à la conclusion de la présente convention, et qui sont de nature :
+          <ul style="margin: 0.5rem 0 0.5rem 1rem; list-style-type: decimal">
+            <li>soit à affecter négativement la valeur de marché du bien à financer par LENDIMMOPME,</li>
             <li>soit à affecter négativement l'activité du Porteur de Projet, sa capacité de remboursement du prêt et/ou à mettre en péril sa continuité ou sa survie.</li>
           </ul>
         </li>
