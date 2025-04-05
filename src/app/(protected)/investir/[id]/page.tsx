@@ -10,9 +10,9 @@ import InvestmentDialog from "@/components/InvestmentDialog";
 // ... rest of the file remains unchanged
 
 type PageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 export default async function ProjectPage({ params }: PageProps) {
