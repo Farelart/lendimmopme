@@ -28,19 +28,19 @@ export default function InvestirPage() {
             />
             <div>
               <h2 className="text-xl font-bold text-amber-800 mb-2">
-                Avertissement sur les risques d'investissement
+                Avertissement sur les risques d&apos;investissement
               </h2>
               <p className="text-amber-700 mb-4">
                 Investir dans des projets immobiliers ou des PME comporte des
                 risques, notamment une perte partielle ou totale du capital
-                investi, un risque d'illiquidité et l'absence de garantie de
-                rendement.
+                investi, un risque d&apos;illiquidité et l&apos;absence de
+                garantie de rendement.
               </p>
               <p className="text-amber-700">
                 Nous vous recommandons de diversifier vos investissements et de
-                n'investir que des sommes dont vous n'avez pas besoin à court
-                terme. Avant d'investir, prenez le temps d'étudier attentivement
-                chaque projet et de consulter nos{" "}
+                n&apos;investir que des sommes dont vous n&apos;avez pas besoin
+                à court terme. Avant d&apos;investir, prenez le temps
+                d&apos;étudier attentivement chaque projet et de consulter nos{" "}
                 <Link href="/risques" className="underline font-medium">
                   informations détaillées sur les risques
                 </Link>

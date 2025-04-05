@@ -71,7 +71,7 @@ export default function InvestmentForm({
 
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <Label htmlFor="amount">Montant de l'investissement (€)</Label>
+          <Label htmlFor="amount">Montant de l&apos;investissement (€)</Label>
           <Input
             id="amount"
             type="number"
@@ -98,8 +98,9 @@ export default function InvestmentForm({
               htmlFor="terms"
               className="text-sm font-normal leading-tight"
             >
-              J'ai lu et j'accepte les conditions d'investissement et je
-              comprends les risques associés à cet investissement.
+              J&apos;ai lu et j&apos;accepte les conditions
+              d&apos;investissement et je comprends les risques associés à cet
+              investissement.
             </Label>
           </div>
         </div>
