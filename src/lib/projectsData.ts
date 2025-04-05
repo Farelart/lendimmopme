@@ -52,57 +52,89 @@ export const projects = [
   },
   {
     id: 2,
-    title: "SOLARVEST",
+    title: "CLS IMMO-Prestige SAS",
     image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=500&auto=format&fit=crop",
+      "/cls.png",
     images: [
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=500&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=500&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1611365892117-bce7901ffef6?q=80&w=500&auto=format&fit=crop",
+      "/cls.png",
+      "/cls2.png",
+      "/cls3.png",
     ],
-    category: "Énergie Renouvelable",
-    status: "Fin de collecte dans environ 20 jours",
+    category: "Immobilier",
+    status: "En cours de collecte",
     description:
-      "Solution innovante de panneaux solaires flottants pour exploiter les surfaces aquatiques et augmenter la production d'énergie renouvelable.",
+      "Acquisition et rénovation d'un appartement de 50m² à Bordeaux avec un potentiel de plus-value attractif. Programme de rafraîchissement complet incluant cuisine, électricité et plomberie.",
     detailedDescription: `
-      <h2>Présentation de SOLARVEST</h2>
-      <p>SOLARVEST développe une technologie de panneaux solaires flottants conçus pour être installés sur des plans d'eau (lacs, réservoirs, bassins industriels). Cette approche permet d'exploiter des surfaces inutilisées tout en améliorant l'efficacité énergétique.</p>
-      
-      <h3>Notre innovation</h3>
-      <p>Nos panneaux solaires flottants offrent plusieurs avantages par rapport aux installations terrestres traditionnelles :</p>
-      <ul>
-        <li>Refroidissement naturel par l'eau, augmentant l'efficacité de 10-15%</li>
-        <li>Aucune utilisation de terres agricoles ou constructibles</li>
-        <li>Réduction de l'évaporation de l'eau (jusqu'à 70%)</li>
-        <li>Limitation de la prolifération d'algues dans les réservoirs</li>
+      <h2 style="font-weight: bold; margin-bottom: 1rem">Présentation de CLS IMMO-Prestige SAS</h2>
+      <p>CLS IMMO-Prestige SAS est un professionnel de l'immobilier opérant dans la région bordelaise.
+      Il souhaite emprunter 156.000 € afin de financer l'acquisition et les travaux de rafraichissement
+      d'un appartement de 50 m2 situé au 29 Rue du Grand Lebrun à Bordeaux. Ce prêt au capital 100
+      % assuré est également assorti d'une sûreté hypothécaire de premier rang avec un ratio LTV
+      estimé à 62% après travaux.</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Condition suspensive n° 1</h3>
+      <p>Lever minimum 130 000 € avant le 28/04/2025 12:00</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Condition suspensive n° 2</h3>
+      <ol style="margin-left: 1rem">
+        <li style="margin-bottom: 1rem">L'absence de survenance ou de mise au jour d'évènements, dont LOOKANDFIN n'a pas été informée par le Porteur de Projet préalablement à la conclusion de la présente convention, et qui sont de nature :
+          <ul style="margin: 0.5rem 0 0.5rem 1rem">
+            <li>soit à affecter négativement la valeur de marché du bien à financer par LOOKANDFIN,</li>
+            <li>soit à affecter négativement l'activité du Porteur de Projet, sa capacité de remboursement du prêt et/ou à mettre en péril sa continuité ou sa survie.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Contexte et usage des fonds</h3>
+      <p>CLS IMMO-Prestige SAS est l'entreprise de marchands de biens appartenant à Monsieur et
+      Madame Benchena. Avant la création de CLS IMMO en 2018, le couple avait déjà réalisé
+      plusieurs opérations immobilières à titre privé. Cette société opère principalement dans la région
+      bordelaise, se spécialisant dans l'acquisition et la valorisation d'appartements et de maisons
+      pour fournir des biens clés-en-main.</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Le budget du projet</h3>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Prix de revient à la total : 229.875 €</li>
+        <li>Chiffre d'affaires prévisionnel : 250.000 €</li>
+        <li>Marge corrigée : 20.125 €</li>
       </ul>
-      
-      <h3>Le marché</h3>
-      <p>Le marché mondial du solaire flottant devrait atteindre 2,7 milliards de dollars d'ici 2025, avec un taux de croissance annuel de 22%. La France, avec ses nombreux plans d'eau et son engagement pour la transition énergétique, représente un marché particulièrement prometteur.</p>
-      
-      <h3>Notre stratégie</h3>
-      <p>Les fonds levés serviront à :</p>
-      <ul>
-        <li>Finaliser le développement de notre technologie brevetée</li>
-        <li>Réaliser trois installations pilotes en France</li>
-        <li>Constituer une équipe commerciale et technique</li>
-        <li>Obtenir les certifications nécessaires pour le déploiement à grande échelle</li>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">L'intervention de Look&Fin</h3>
+      <p>L'intervention de Look&Fin de 156.000€ se décompose comme suit :</p>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>136.000€ d'acquisition ce qui correspond à 91% de LTA</li>
+        <li>20.000 € d'accompagnement travaux</li>
       </ul>
-      
-      <h3>Projections financières</h3>
-      <p>Nous prévoyons un chiffre d'affaires de 3,5 millions d'euros d'ici 3 ans, avec une marge brute de 40%. Le retour sur investissement est estimé à 9,5% par an.</p>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Sûretés</h3>
+      <ul style="margin-left: 1rem">
+        <li>HSPD + Hypothèque conventionnelle de rang 1</li>
+        <li>Cautions personnelles de Monsieur Samy Benchena et de Madame Carine Benchena.</li>
+      </ul>
+
+      <h3 style="font-weight: bold; margin: 1.5rem 0 1rem">Localisation</h3>
+      <p style="font-weight: bold">Adresse : 29 Rue du Grand Lebrun – Bordeaux 33200</p>
+      <p>Le bien est situé dans le quartier de Caudéran à Bordeaux, dans le sud-ouest de la France, en
+      région Nouvelle-Aquitaine. Caudéran se trouve à 2 km du centre-ville de Bordeaux.</p>
+
+      <h4 style="font-weight: bold; margin: 1rem 0">Accessibilité</h4>
+      <ul style="margin-left: 1rem; list-style-type: disc">
+        <li>Bus : Plusieurs lignes du réseau TBM desservent la zone</li>
+        <li>Train : Gare de Caudéran-Mérignac située à environ 25 minutes à pied</li>
+        <li>Accès routier : Proximité de la Rocade de Bordeaux (A630)</li>
+      </ul>
     `,
     progress: 65,
-    amount: 850000,
-    yield: 9.5,
-    duration: "48 mois",
-    minInvestment: 75000,
+    amount: 156000,
+    yield: 5.5,
+    duration: "24 mois",
+    minInvestment: 5000,
     highlights: [
-      "Technologie brevetée avec efficacité supérieure de 15%",
-      "Marché en croissance de 22% par an",
-      "Partenariats avec deux grands fournisseurs d'énergie",
-      "Impact environnemental positif double (énergie propre et préservation de l'eau)",
-      "Rendement annuel attractif de 9,5%",
+      "Capital 100% assuré par Atradius",
+      "Garantie hypothécaire en 1er rang",
+      "Ratio LTV attractif de 62% après travaux",
+      "Localisation prisée à Bordeaux",
+      "Rentabilité prévisionnelle de 5.5%",
     ],
     isFavorite: false,
     isActive: true,
