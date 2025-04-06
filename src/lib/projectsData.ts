@@ -53,13 +53,8 @@ export const projects = [
   {
     id: 2,
     title: "CLS IMMO-Prestige SAS",
-    image:
-      "/cls.png",
-    images: [
-      "/cls.png",
-      "/cls2.png",
-      "/cls3.png",
-    ],
+    image: "/cls.png",
+    images: ["/cls.png", "/cls2.png", "/cls3.png"],
     category: "Immobilier",
     status: "En cours de collecte",
     description:
@@ -150,7 +145,7 @@ export const projects = [
       "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=500&auto=format&fit=crop",
     ],
     category: "Fintech",
-    status: "Financé en Janvier 2023",
+    status: "Financé en Janvier 2025",
     description:
       "Plateforme de gestion financière pour TPE/PME intégrant IA et automatisation pour optimiser la trésorerie et faciliter l'accès au financement.",
     detailedDescription: `
@@ -209,7 +204,7 @@ export const projects = [
       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500&auto=format&fit=crop",
     ],
     category: "Immobilier",
-    status: "Financé en Mars 2023",
+    status: "Financé en Mars 2025",
     description:
       "Développement d'un complexe résidentiel écologique de 45 appartements intégrant des solutions innovantes d'économie d'énergie.",
     progress: 100,
@@ -227,7 +222,7 @@ export const projects = [
       "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?q=80&w=500&auto=format&fit=crop",
     ],
     category: "Agroalimentaire",
-    status: "Financé en Avril 2023",
+    status: "Financé en Avril 2024",
     description:
       "Production de protéines alternatives à base de fermentation de précision pour l'industrie alimentaire.",
     progress: 100,
@@ -245,7 +240,7 @@ export const projects = [
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=500&auto=format&fit=crop",
     ],
     category: "Santé",
-    status: "Financé en Mai 2023",
+    status: "Financé en Mai 2024",
     description:
       "Dispositif médical portable utilisant l'IA pour le diagnostic précoce de pathologies cutanées.",
     progress: 100,
@@ -275,13 +270,8 @@ export const projects = [
   {
     id: 8,
     title: "IMOYA",
-    image:
-      "/imoya1.png",
-    images: [
-      "/imoya1.png",
-      "/imoya2.png",
-      "/imoya3.png",
-    ],
+    image: "/imoya1.png",
+    images: ["/imoya1.png", "/imoya2.png", "/imoya3.png"],
     category: "Immobilier",
     status: "En cours de collecte",
     description:
@@ -343,7 +333,7 @@ export const projects = [
       "Spécialiste de la reconversion de bâtiments historiques",
       "Projets à forte valeur ajoutée environnementale",
       "Approche unique intergénérationnelle",
-      "Track record prouvé avec des projets d'envergure"
+      "Track record prouvé avec des projets d'envergure",
     ],
     isFavorite: false,
     isActive: true,
@@ -426,20 +416,16 @@ export const projects = [
       "Localisation premium dans l'Eurométropole de Strasbourg",
       "LTV expertisé post-travaux de 62%",
       "Capital 100% assuré par Atradius",
-      "Fort potentiel de plus-value (marge brute 24%)"
+      "Fort potentiel de plus-value (marge brute 24%)",
     ],
     isFavorite: false,
-    isActive: true
+    isActive: true,
   },
   {
     id: 10,
     title: "SCECIB IMMOBILIER",
     image: "/secib.png",
-    images: [
-      "/secib.png",
-      "/secib2.png",
-      
-    ],
+    images: ["/secib.png", "/secib2.png"],
     category: "Immobilier",
     status: "En cours de collecte",
     description:
@@ -509,22 +495,19 @@ export const projects = [
       "2500 ménages accompagnés vers la propriété",
       "380M€ de commandes jusqu'en 2030",
       "Garantie par le groupe CIB (50M€ de fonds propres)",
-      "Rendement attractif de 12% sur 12 mois"
+      "Rendement attractif de 12% sur 12 mois",
     ],
     isFavorite: false,
-    isActive: true
+    isActive: true,
   },
   {
     id: 11,
     title: "ALTEN GLOBAL",
     image: "/alter.png",
-    images: [
-      "/alter.png",
-      "/alter2.png",
-    ],
+    images: ["/alter.png", "/alter2.png"],
     category: "Energie",
     status: "En cours de collecte",
-    description: 
+    description:
       "Développeur et opérateur international d'énergie solaire photovoltaïque, avec 500 MW de puissance installée et 3 GW en développement. Joint-venture stratégique pour accélérer le déploiement de projets en Espagne, Italie et Mexique.",
     detailedDescription: `
       <h2 style="font-weight: bold; margin-bottom: 1rem">Présentation d'ALTEN GLOBAL</h2>
@@ -581,22 +564,19 @@ export const projects = [
       "3 GW de projets en développement",
       "337 000 tonnes de CO₂ évitées par an",
       "Équipe dirigeante expérimentée (Deutsche Bank, Lazard)",
-      "Présence internationale (Europe, Mexique, Afrique)"
+      "Présence internationale (Europe, Mexique, Afrique)",
     ],
     isFavorite: false,
-    isActive: true
+    isActive: true,
   },
   {
     id: 12,
     title: "ReNewGreen",
     image: "/renewgreen.png",
-    images: [
-      "/renewgreen.png",
-      "/renewgreen2.png",
-    ],
+    images: ["/renewgreen.png", "/renewgreen2.png"],
     category: "Industrie",
     status: "En cours de collecte",
-    description: 
+    description:
       "Première usine belge de recyclage de pneus usagés par pyrolyse. Transformation innovante de 20 000 tonnes de pneus par an en produits à haute valeur ajoutée pour l'industrie pétrochimique, avec un processus écologique en circuit fermé.",
     detailedDescription: `
       <h2 style="font-weight: bold; margin-bottom: 1rem">Présentation de ReNewGreen</h2>
@@ -661,10 +641,144 @@ export const projects = [
       "20 000 tonnes de pneus recyclés par an",
       "Partenariat stratégique avec BASF",
       "40 emplois directs créés",
-      "Technologie innovante en circuit fermé"
+      "Technologie innovante en circuit fermé",
     ],
     isFavorite: false,
-    isActive: true
+    isActive: true,
+  },
+  {
+    id: 13,
+    title: "Résidence Les Oliviers",
+    image:
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=500&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=500&auto=format&fit=crop",
+    ],
+    category: "Résidentiel",
+    status: "Financé en Juillet 2023",
+    description:
+      "Construction d'une résidence de standing de 24 appartements avec espaces verts et piscine dans un quartier prisé de Montpellier.",
+    progress: 100,
+    amount: 1850000,
+    yield: 9.2,
+    duration: "24 mois",
+    isActive: false,
+  },
+  {
+    id: 14,
+    title: "Immeuble Haussmannien",
+    image:
+      "https://images.unsplash.com/photo-1551361415-69c87624334f?q=80&w=500&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1551361415-69c87624334f?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=500&auto=format&fit=crop",
+    ],
+    category: "Rénovation",
+    status: "Financé en Août 2024",
+    description:
+      "Rénovation complète d'un immeuble haussmannien pour création de 8 appartements de luxe au cœur de Paris.",
+    progress: 100,
+    amount: 2400000,
+    yield: 8.7,
+    duration: "18 mois",
+    isActive: false,
+  },
+
+  {
+    id: 15,
+    title: "EcoFarm Technologies",
+    image:
+      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=500&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1595351475754-e7bd128c5fe0?q=80&w=500&auto=format&fit=crop",
+    ],
+    category: "Agriculture",
+    status: "Financé en Octobre 2023",
+    description:
+      "Ferme verticale urbaine utilisant l'hydroponie et l'IA pour optimiser la production de légumes frais en circuit court.",
+    progress: 100,
+    amount: 950000,
+    yield: 7.8,
+    duration: "36 mois",
+    isActive: false,
+  },
+  {
+    id: 16,
+    title: "Résidence Seniors Harmonie",
+    image:
+      "https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=500&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db3d?q=80&w=500&auto=format&fit=crop",
+    ],
+    category: "Résidentiel",
+    status: "Financé en Novembre 2023",
+    description:
+      "Création d'une résidence services seniors de 45 logements avec espaces communs et services adaptés à Bordeaux.",
+    progress: 100,
+    amount: 2750000,
+    yield: 8.5,
+    duration: "42 mois",
+    isActive: false,
+  },
+  {
+    id: 17,
+    title: "Parc Solaire Méditerranée",
+    image:
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=500&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=500&auto=format&fit=crop",
+    ],
+    category: "Énergie",
+    status: "Financé en Décembre 2023",
+    description:
+      "Installation d'un parc photovoltaïque de 5MW dans le sud de la France, produisant de l'électricité verte pour 2000 foyers.",
+    progress: 100,
+    amount: 1850000,
+    yield: 7.2,
+    duration: "20 ans",
+    isActive: false,
+  },
+  {
+    id: 18,
+    title: "Hôtel Boutique Saint-Germain",
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=500&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=500&auto=format&fit=crop",
+    ],
+    category: "Hôtellerie",
+    status: "Financé en Janvier 2022",
+    description:
+      "Rénovation d'un hôtel de charme de 28 chambres dans le quartier Saint-Germain à Paris, incluant un restaurant gastronomique.",
+    progress: 100,
+    amount: 2100000,
+    yield: 9.5,
+    duration: "24 mois",
+    isActive: false,
+  },
+  {
+    id: 19,
+    title: "Campus Tech Innovation",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=500&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=500&auto=format&fit=crop",
+    ],
+    category: "Bureaux",
+    status: "Financé en Février 2022",
+    description:
+      "Création d'un campus d'entreprises tech de 5000m² à Sophia Antipolis, avec espaces de coworking et laboratoires d'innovation.",
+    progress: 100,
+    amount: 4500000,
+    yield: 8.3,
+    duration: "36 mois",
+    isActive: false,
   },
 ];
 

@@ -1,0 +1,41 @@
+{
+  "Header": {
+    "invest": "Investir",
+    "raiseFunds": "Levez des fonds",
+    "blog": "Blog",
+    "login": "Se connecter",
+    "signup": "S'inscrire",
+    "lend": "Prêter",
+    "returnRate": "9.2% de rendements sur les 12 derniers mois",
+    "heroTitle": "Donnez des ailes à vos projets",
+    "heroDescription": "LendImmoPME vous donne accès à des opportunités d'investissement exclusives sélectionnées par nos experts pour optimiser votre patrimoine.",
+    "realEstate": "Immobilier",
+    "sme": "PME",
+    "startInvesting": "Commencer à investir",
+    "discoverProjects": "Découvrir les projets"
+  },
+  "Footer": {
+    "projects": {
+      "title": "Les projets",
+      "crowdfunding": "Les projets en crowdfunding"
+    },
+    "investors": {
+      "title": "Investisseurs",
+      "howToInvest": "Comment investir?",
+      "investmentRisks": "Risques d'investissement",
+      "whyInvest": "Pourquoi investir?",
+      "needHelp": "Besoin d'aide?"
+    },
+    "raiseFunds": {
+      "title": "Levez des fonds",
+      "realEstate": "Déposer un dossier immobilier",
+      "sme": "Déposer un dossier PME"
+    },
+    "warning": {
+      "title": "AVERTISSEMENT",
+      "message": "Les investissements proposés présentent un risque de perte partielle ou totale du capital ainsi qu'un risque d'illiquidité."
+    },
+    "termsOfUse": "Conditions d'utilisation",
+    "privacyPolicy": "Politique de confidentialité"
+  }
+}

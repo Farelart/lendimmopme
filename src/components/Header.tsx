@@ -1,10 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { Link } from "@/i18n/routing";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const t = useTranslations("Header");
 
   return (
     <div className="relative min-h-[600px] h-screen w-full overflow-hidden bg-gradient-to-br from-purple-600 via-purple-700 to-pink-300">
@@ -22,32 +25,33 @@ export default function Header() {
                 href="/sign-in"
                 className="text-white/90 hover:text-white text-sm lg:text-base whitespace-nowrap"
               >
-                Investir
+                {t("invest")}
               </Link>
               <Link
                 href="/sign-in"
                 className="text-white/90 hover:text-white text-sm lg:text-base whitespace-nowrap"
               >
-                Levez des fonds
+                {t("raiseFunds")}
               </Link>
               <Link
                 href="/blog/selection"
                 className="text-white/90 hover:text-white text-sm lg:text-base whitespace-nowrap"
               >
-                Blog
+                {t("blog")}
               </Link>
               <Link
                 href="/sign-in"
                 className="text-purple-600 bg-white px-4 py-2 rounded-full hover:bg-gray-200 text-sm lg:text-base whitespace-nowrap transition-all"
               >
-                Se connecter
+                {t("login")}
               </Link>
-              <Link
+              <LanguageSwitcher />
+              {/* <Link
                 href="/sign-up"
                 className="text-white bg-purple-600 px-4 py-2 rounded-full hover:bg-purple-400 text-sm lg:text-base whitespace-nowrap transition-all"
               >
-                S&apos;inscrire
-              </Link>
+                {t('signup')}
+              </Link> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -96,31 +100,31 @@ export default function Header() {
                 href="/sign-in"
                 className="block text-white hover:text-gray-200"
               >
-                Investir
+                {t("invest")}
               </Link>
               <Link
                 href="/sign-in"
                 className="block text-white  hover:text-gray-200"
               >
-                Prêter
+                {t("lend")}
               </Link>
               <Link
                 href="/blog/selection"
                 className="block text-white  hover:text-gray-200"
               >
-                Blog
+                {t("blog")}
               </Link>
               <Link
                 href="/sign-in"
                 className="text-purple-600 bg-white px-4 py-2 rounded-full hover:bg-gray-200 text-sm lg:text-base whitespace-nowrap transition-all"
               >
-                Se connecter
+                {t("login")}
               </Link>
               <Link
                 href="/sign-up"
                 className="text-white bg-purple-600 px-4 py-2 rounded-full hover:bg-purple-400 text-sm lg:text-base whitespace-nowrap transition-all"
               >
-                S&apos;inscrire
+                {t("signup")}
               </Link>
             </div>
           )}
@@ -137,36 +141,34 @@ export default function Header() {
             >
               <path d="M12 2L1 21h22L12 2z" />
             </svg>
-            9.2% de rendements sur les 12 derniers mois
+            {t("returnRate")}
           </div>
 
           <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl lg:text-6xl text-white text-center mb-4 sm:mb-8">
-            Donnez des ailes à vos projets
+            {t("heroTitle")}
           </h1>
           <p className="text-white/90 text-sm sm:text-base md:text-lg text-center max-w-3xl mb-6 sm:mb-12 px-4">
-            LendImmoPME vous donne accès à des opportunités
-            d&apos;investissement exclusives sélectionnées par nos experts pour
-            optimiser votre patrimoine.
+            {t("heroDescription")}
           </p>
 
           <div className="flex justify-center gap-4 mb-6 sm:mb-12">
             <button className="bg-white text-purple-900 px-4 sm:px-8 py-2 rounded-full hover:bg-gray-100 text-xs sm:text-sm">
-              Immobilier
+              {t("realEstate")}
             </button>
             <button className="bg-white/10 text-white px-4 sm:px-8 py-2 rounded-full hover:bg-white/20 text-xs sm:text-sm">
-              PME
+              {t("sme")}
             </button>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-orange-500 hover:bg-white text-white hover:text-purple-700 px-6 sm:px-8 py-3 rounded-full font-bold text-sm sm:text-base transition-colors duration-200">
-              Commencer à investir
+              {t("startInvesting")}
             </button>
             <Link
               href="/#projets"
               className="bg-white/10 text-white px-6 sm:px-8 py-3 rounded-full hover:bg-white hover:text-purple-700 text-sm font-bold sm:text-base transition-colors duration-200"
             >
-              Découvrir les projets
+              {t("discoverProjects")}
             </Link>
           </div>
         </div>

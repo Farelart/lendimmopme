@@ -229,7 +229,7 @@ export default function InvestirPage() {
           Découvrez nos succès passés
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {completedProjects.slice(0, 6).map((project) => (
+          {completedProjects.map((project) => (
             <div
               key={project.id}
               className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300"

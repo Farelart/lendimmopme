@@ -1,0 +1,41 @@
+{
+  "Header": {
+    "invest": "Investieren",
+    "raiseFunds": "Geld sammeln",
+    "blog": "Blog",
+    "login": "Anmelden",
+    "signup": "Registrieren",
+    "lend": "Verleihen",
+    "returnRate": "9,2% Rendite in den letzten 12 Monaten",
+    "heroTitle": "Geben Sie Ihren Projekten Flügel",
+    "heroDescription": "LendImmoPME bietet Ihnen Zugang zu exklusiven Anlagemöglichkeiten, die von unseren Experten ausgewählt wurden, um Ihr Vermögen zu optimieren.",
+    "realEstate": "Immobilien",
+    "sme": "KMU",
+    "startInvesting": "Mit dem Investieren beginnen",
+    "discoverProjects": "Projekte entdecken"
+  },
+  "Footer": {
+    "projects": {
+      "title": "Die Projekte",
+      "crowdfunding": "Crowdfunding-Projekte"
+    },
+    "investors": {
+      "title": "Investoren",
+      "howToInvest": "Wie investiert man?",
+      "investmentRisks": "Anlagerisiken",
+      "whyInvest": "Warum investieren?",
+      "needHelp": "Brauchen Sie Hilfe?"
+    },
+    "raiseFunds": {
+      "title": "Geld sammeln",
+      "realEstate": "Immobiliendossier einreichen",
+      "sme": "KMU-Dossier einreichen"
+    },
+    "warning": {
+      "title": "WARNUNG",
+      "message": "Die angebotenen Investitionen bergen das Risiko eines teilweisen oder vollständigen Kapitalverlusts sowie ein Liquiditätsrisiko."
+    },
+    "termsOfUse": "Nutzungsbedingungen",
+    "privacyPolicy": "Datenschutzrichtlinie"
+  }
+}
