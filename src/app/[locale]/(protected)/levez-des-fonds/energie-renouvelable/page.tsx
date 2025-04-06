@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import sendEmail from "@/actions/levezEmail";
-import "@/app/form-styles.css";
+import "@/app/[locale]/form-styles.css";
 
 export default function EnergieRenouvelableFormPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
