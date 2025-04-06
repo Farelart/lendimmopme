@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import sendInvestmentEmail from "@/actions/investirEmail";
+import Link from "next/link";
 
 export default function InvestmentDialog({
   projectId,
@@ -144,12 +145,12 @@ export default function InvestmentDialog({
                 className="text-sm leading-tight cursor-pointer"
               >
                 J&apos;accepte les{" "}
-                <a
+                <Link
                   href="/conditions"
                   className="text-purple-600 hover:underline"
                 >
                   conditions d&apos;investissement
-                </a>{" "}
+                </Link>{" "}
                 et je confirme avoir pris connaissance des risques associés.
               </Label>
             </div>
