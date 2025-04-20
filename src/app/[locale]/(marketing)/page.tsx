@@ -27,6 +27,132 @@ export default function Page() {
 
         <CollectCarousel />
 
+        <section id="projets" className="container mx-auto mt-20 px-4">
+          <h2 className="font-extrabold text-2xl text-center my-5 text-neutral-700">
+            Nos{" "}
+            <span className="bg-orange-500/50 p-1 rounded-xl">
+              opportunités
+            </span>{" "}
+            d&apos;investissement
+          </h2>
+          <p className="text-center text-neutral-700 mb-10">
+            Découvrez nos solutions pour placer votre épargne ou financer votre
+            entreprise
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Carte pour les investisseurs */}
+            <div className="bg-white rounded-lg shadow-xl p-8 flex flex-col relative overflow-hidden border border-gray-100">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -z-10"></div>
+
+              <h3 className="text-2xl font-bold text-center mb-2 text-gray-800">
+                Placer votre épargne
+              </h3>
+              <h4 className="text-xl text-center mb-8 text-gray-600">
+                dans l&apos;économie réelle
+              </h4>
+
+              <div className="flex flex-col gap-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="text-green-500 bg-green-50 p-1 rounded-full">
+                    <BiCheck size={24} />
+                  </div>
+                  <p className="text-gray-700">
+                    Taux d&apos;intérêt de 2 à 4% /an
+                  </p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="text-green-500 bg-green-50 p-1 rounded-full">
+                    <BiCheck size={24} />
+                  </div>
+                  <p className="text-gray-700">Remboursements mensuels</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="text-green-500 bg-green-50 p-1 rounded-full">
+                    <BiCheck size={24} />
+                  </div>
+                  <p className="text-gray-700">Aucun frais</p>
+                </div>
+              </div>
+
+              <Link
+                href="/sign-in"
+                className="bg-purple-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full text-center font-medium mt-auto transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Investir dans une PME
+              </Link>
+
+              <div className="mt-8 text-gray-600 italic text-sm border-t border-gray-100 pt-6">
+                <p className="mb-2 flex gap-2">
+                  <span className="text-3xl text-gray-300">&quot;</span>
+                  <span>
+                    En Crowdlending j&apos;ai choisi LendImmoPME pour la qualité
+                    de ses analyses
+                  </span>
+                </p>
+                <p className="text-gray-500 pl-8">
+                  Patricia, Cadre dans le secteur bancaire
+                </p>
+              </div>
+            </div>
+
+            {/* Carte pour les entrepreneurs */}
+            <div className="bg-white rounded-lg shadow-xl p-8 flex flex-col relative overflow-hidden border border-gray-100">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -z-10"></div>
+
+              <h3 className="text-2xl font-bold text-center mb-2 text-gray-800">
+                Financer votre entreprise
+              </h3>
+              <h4 className="text-xl text-center mb-8 text-gray-600">
+                Investissements de 50k€ à 5M€
+              </h4>
+
+              <div className="flex flex-col gap-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="text-green-500 bg-green-50 p-1 rounded-full">
+                    <BiCheck size={24} />
+                  </div>
+                  <p className="text-gray-700">Votre prêt sous 7 jours</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="text-green-500 bg-green-50 p-1 rounded-full">
+                    <BiCheck size={24} />
+                  </div>
+                  <p className="text-gray-700">Sans caution personnelle</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="text-green-500 bg-green-50 p-1 rounded-full">
+                    <BiCheck size={24} />
+                  </div>
+                  <p className="text-gray-700">
+                    Fixez votre taux d&apos;intérêt
+                  </p>
+                </div>
+              </div>
+
+              <Link
+                href="/sign-in"
+                className="bg-purple-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full text-center font-medium mt-auto transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Demander un prêt
+              </Link>
+
+              <div className="mt-8 text-gray-600 italic text-sm border-t border-gray-100 pt-6">
+                <p className="mb-2 flex gap-2">
+                  <span className="text-3xl text-gray-300">&quot;</span>
+                  <span>
+                    1M€ levé en 33 sec. pour la croissance de notre PME
+                    familiale!
+                  </span>
+                </p>
+                <p className="text-gray-500 pl-8">
+                  Christiane Andrès, BB Distribe
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="container mx-auto mt-20 px-4">
           <h2 className="font-extrabold text-2xl text-center my-5 text-neutral-700">
             Pourquoi choisir LendImmoPME pour investir?
